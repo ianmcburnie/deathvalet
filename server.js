@@ -5,7 +5,7 @@ var express = require("express"),
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send("<!doctype html><html><head><style>html{font-family:Century;}</style></head><body><hgroup><h1>Death Valet</h1><h2>A graphic novel by Ian McBurnie &amp; Dan Haak.</h2><h3>Coming soon...</h3></hgroup></body></html>\n");
+  response.send("<!doctype html><html><head><title>Death Valet</title><style>html{font-family:Century;}</style></head><body><hgroup><h1>Death Valet</h1><h2>A graphic novel by Ian McBurnie &amp; Dan Haak.</h2><h3>Coming soon...</h3></hgroup></body></html>\n");
 });
 
 app.listen(port, function() {
