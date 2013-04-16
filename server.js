@@ -1,13 +1,26 @@
 var express = require("express"),
     app = express(),
-    port = process.env.PORT || 5000;
+    routes = require('./routes'),
+    path = require('path');
 
-app.use(express.logger());
-
-app.get('/', function(request, response) {
-  response.send("<!doctype html><html><head><title>Death Valet</title><style>html{font-family:Century;}</style></head><body><hgroup><h1>Death Valet</h1><h2>A graphic novel by Ian McBurnie &amp; Dan Haak.</h2><h3>Coming soon...</h3></hgroup></body></html>\n");
+app.configure(function(){
+    app.set('port', process.env.PORT || process.env.npm_package_config_development_port || 5000);
+    app.set('views', __dirname + '/views');
+    app.set('view engine', 'ejs');
+    app.use(express.favicon());
+    app.use(express.logger('dev'));
+    app.use(express.bodyParser());
+    app.use(express.methodOverride());
+    app.use(app.router);
+    app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.listen(port, function() {
-  console.log("Listening on " + port);
+app.configure('development', function(){
+    app.use(express.errorHandler());
+});
+
+app.get('/', routes.index);
+   
+app.listen(app.get('port'), function() {
+    console.log("Express server listening on port " + app.get('port'));
 });
