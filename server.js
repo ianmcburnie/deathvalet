@@ -2,10 +2,11 @@ var cluster = require("cluster"),
 	express = require("express"),
     routes = require('./routes'),
     path = require('path'),
-	numCPUs = require('os').cpus().length;
+	numCPUs = require('os').cpus().length,
+	useCluster = false;
+
+if (useCluster === true && cluster.isMaster) {
 	
-/*
-if (cluster.isMaster) {
 	for (var i = 0; i < numCPUs; i++) {
 		cluster.fork();
 	}
@@ -13,9 +14,9 @@ if (cluster.isMaster) {
 	cluster.on('exit', function(worker, code, signal) {
 		console.log('worker ' + worker.process.pid + ' died');
 	});
-	
+		
 } else {
-*/
+	
     var app = express();
 
 	app.configure(function(){
@@ -39,5 +40,6 @@ if (cluster.isMaster) {
 	app.listen(app.get('port'), function() {
 	    console.log("Express server listening on port " + app.get('port'));
 	});
-//}
+	
+}
 
