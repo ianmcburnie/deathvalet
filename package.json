@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "node server",
-    "supervisor": "NODE_ENV=development supervisor --extensions 'node|js|jade' server"
+    "nodemon": "NODE_ENV=development nodemon -e html,css,js,jade server.js"
   },
   "config" : { 
     "development" : {
