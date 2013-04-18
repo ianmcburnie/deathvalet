@@ -3,7 +3,7 @@ var cluster = require("cluster"),
     routes = require('./routes'),
     path = require('path'),
 	numCPUs = require('os').cpus().length,
-	useCluster = false;
+	useCluster = true;
 
 if (useCluster === true && cluster.isMaster) {
 	
