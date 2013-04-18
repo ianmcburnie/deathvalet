@@ -3,9 +3,9 @@ var cluster = require("cluster"),
     routes = require('./routes'),
     path = require('path'),
 	numCPUs = require('os').cpus().length;
-
+	
+/*
 if (cluster.isMaster) {
-	// Fork workers.
 	for (var i = 0; i < numCPUs; i++) {
 		cluster.fork();
 	}
@@ -15,6 +15,7 @@ if (cluster.isMaster) {
 	});
 	
 } else {
+*/
     var app = express();
 
 	app.configure(function(){
@@ -38,5 +39,5 @@ if (cluster.isMaster) {
 	app.listen(app.get('port'), function() {
 	    console.log("Express server listening on port " + app.get('port'));
 	});
-}
+//}
 
