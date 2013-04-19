@@ -7,12 +7,16 @@ var cluster = require("cluster"),
 
 if (useCluster === true && cluster.isMaster) {
 	
-	for (var i = 0; i < numCPUs; i++) {
+	var cpuIndex = 0;
+	for (; cpuIndex < numCPUs; cpuIndex++) {
 		cluster.fork();
 	}
-
+	
+	// Listen for dying workers
 	cluster.on('exit', function(worker, code, signal) {
 		console.log('worker ' + worker.process.pid + ' died');
+		// Spawn a new worker
+		cluster.fork();
 	});
 		
 } else {
@@ -38,7 +42,13 @@ if (useCluster === true && cluster.isMaster) {
 	app.get('/', routes.index);
 
 	app.listen(app.get('port'), function() {
-	    console.log("Express server listening on port " + app.get('port'));
+		
+		if(useCluster===true && cluster){
+			console.log("Express server " + cluster.worker.id + " listening on port " + app.get('port'));
+		}
+		else{
+			console.log("Express server listening on port " + app.get('port'));
+		}
 	});
 	
 }
