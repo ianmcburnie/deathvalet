@@ -1,11 +1,12 @@
 {
   "name": "deathvalet",
   "version": "0.0.1",
-  "private": true,    
+  "private": true,
   "dependencies": {
-    "cluster": "*",
-    "express": "3.1.x",
-    "ejs": "*"
+    "cluster": "~0.7.x",
+    "express": "~3.1.x",
+    "ejs": "~0.8.3",
+    "domain": "~0.1.5"
   },
   "engines": {
     "node": "0.10.x",
@@ -15,9 +16,9 @@
     "start": "node server",
     "nodemon": "NODE_ENV=development nodemon -e html,css,js,jade server.js"
   },
-  "config" : { 
-    "development" : {
-      "port" : "5000"
+  "config": {
+    "development": {
+      "port": "5000"
     }
-  }  
+  }
 }

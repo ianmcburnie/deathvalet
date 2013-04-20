@@ -21,8 +21,9 @@ if (useCluster === true && cluster.isMaster) {
 		
 } else {
 	
-    var app = express();
-
+    var app = express(),
+		domain = require('domain');
+		
 	app.configure(function(){
 	    app.set('port', process.env.PORT || process.env.npm_package_config_development_port || 5000);
 	    app.set('views', __dirname + '/views');
@@ -33,6 +34,7 @@ if (useCluster === true && cluster.isMaster) {
 	    app.use(express.methodOverride());
 	    app.use(app.router);
 	    app.use(express.static(path.join(__dirname, 'public')));
+		app.use(setupDomains);
 	});
 
 	app.configure('development', function(){
@@ -42,7 +44,7 @@ if (useCluster === true && cluster.isMaster) {
 	app.get('/', routes.index);
 
 	app.listen(app.get('port'), function() {
-		
+
 		if(useCluster===true && cluster){
 			console.log("Express server " + cluster.worker.id + " listening on port " + app.get('port'));
 		}
@@ -51,5 +53,22 @@ if (useCluster === true && cluster.isMaster) {
 		}
 	});
 	
+	function setupDomains(req, res, next) {
+		var reqd = domain.create();
+		
+		domain.active = reqd;
+		reqd.add(req);
+		reqd.add(res);
+		
+		reqd.on('error', function(err) {
+			req.next(err);
+		});
+		
+		res.on('end', function() {
+			console.log('disposing domain for url ' + req.url);
+		 	reqd.dispose();
+		});
+		
+		reqd.run(next);
+	}
 }
-
