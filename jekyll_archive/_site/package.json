@@ -1,6 +1,0 @@
-{
-    "scripts":{
-        "localhost":"bundler exec jekyll serve --force_polling",
-        "start":"npm run localhost"
-    }
-}
