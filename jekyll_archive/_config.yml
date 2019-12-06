@@ -1,0 +1,13 @@
+# Site settings
+title: Death Valet - The Graphic Novel
+email: ianmcburnie@hotmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Copyright &copy; 2013 - 2015 by Ian McBurnie
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.deathvalet.com" # the base hostname & protocol for your site
+twitter_username: ianmcburnie
+github_username:  ianmcburnie
+pinterest_username:  ianmcburnie
+
+# Build settings
+markdown: kramdown

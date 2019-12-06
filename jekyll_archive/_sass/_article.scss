@@ -1,0 +1,137 @@
+#toc {
+    display: none;
+    font-size: xx-small;
+}
+
+#toc ol {
+    margin: 0 1em;
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    #toc {
+        display: block;
+        padding: 1em;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+}
+
+article {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0 auto;
+    max-width: 320px;
+}
+
+@media (min-width: 450px) {
+    article {
+        max-width: 450px;
+    }
+}
+
+article ol li  {
+    margin: 0;
+    padding: 0;
+}
+
+/* page title container */
+article > ol > li {
+    font-weight: bold;
+    position: relative;
+}
+/* page title prefix */
+article > ol > li:before {
+    content: 'Page';
+    position: absolute;
+    left: -5em;
+}
+/* page title prefix double figures */
+article > ol > li:nth-child(n+10):before {
+    left: -5.5em;
+}
+/* page title text */
+article > ol > li p {
+    display: inline-block;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+/* panel container */
+article > ol > li > ol > li {
+    position: relative;
+}
+/* panel prefix */
+article > ol > li > ol > li:before {
+    content: 'Panel';
+    position: absolute;
+    left: -5.5em;
+}
+/* panel prefix double figures */
+article > ol > li > ol > li:nth-child(n+10):before {
+    left: -6em;
+}
+
+/* caption container */
+article > ol > li > ol > li > blockquote {
+    border: 0;
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 0;
+    margin-left: 1em;
+}
+/* caption title text */
+article > ol > li > ol > li blockquote p {
+    color: black;
+    font-style: normal;
+    display: inline-block;
+    font-style: normal;
+    margin-right: 1em;
+    text-indent: -4.75em;
+}
+/* caption prefix */
+article > ol > li > ol > li blockquote p::before {
+    content: 'Caption. ';
+    display: inline-block;
+    font-weight: bold;
+    text-indent: -1em;
+}
+article blockquote p {
+    display: inline-block;
+}
+article blockquote em {
+    font-style: italic;
+}
+
+/* character */
+article ul > li {
+    display: block;
+    font-weight: bold;
+    margin-left: 6em;
+    text-transform: uppercase;
+}
+/* balloon type */
+article ol > li > ul > li > em {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: -4em;
+    text-transform: none;
+}
+article ol > li > ul > li > em:before {
+    content: '(';
+}
+article ol > li > ul > li > em:after {
+    content: ')';
+}
+/* balloon */
+article ul > li li {
+    font-weight: normal;
+    margin-bottom: 1em;
+    margin-left: -8.5em;
+    margin-right: 2em;
+    text-transform: none;
+}

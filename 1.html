@@ -1,0 +1,1030 @@
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>DEATH VALET ISSUE #1</title>
+  <style type="text/css">body {
+counter-reset: scenecountl scenecountr shotcount charcount pages 1;
+}
+
+.sceneheading {
+counter-reset: shotcount;
+}
+
+@media print {
+body {
+line-height: 1;
+}
+
+}
+
+@media screen {
+span.camera, span.lights, span.electrics, span.opticalfx {
+color: rgb(51, 153, 0);
+}
+
+span.music, span.sound, span.soundfx {
+color: rgb(102, 51, 0);
+}
+
+span.cgi, span.construction, span.painting, span.set, span.setdressing, span.specialfx {
+color: rgb(0, 51, 204);
+}
+
+span.hair, span.makeup, span.props, span.wardrobe, span.weapons {
+color: rgb(153, 0, 255);
+}
+
+span.equip, span.mechfx, span.stunts {
+color: rgb(255, 102, 0);
+}
+
+span.animals, span.equip, span.greenery, span.handler, span.livestock, span.misc, span.vehicles {
+color: rgb(255, 51, 255);
+}
+
+span.actor, span.cast, span.crew, span.extras {
+color: rgb(255, 0, 0);
+}
+
+span.addlabour, span.location, span.prodnotes, span.security {
+color: rgb(238, 187, 0);
+}
+
+[active="true"] {
+background: yellow none repeat scroll 0% 0%; color: black; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;
+}
+
+span[token="true"] {
+background-image: url(chrome://celtx/skin/token.png); background-repeat: no-repeat; background-position: center center; min-height: 12px; margin-left: 2px; margin-right: 2px; padding-left: 10px; -moz-user-select: text;
+}
+
+span.note, span.media {
+background-repeat: no-repeat; background-position: center center; min-height: 12px; margin-left: 2px; padding-left: 10px; z-index: 1; position: relative; top: -8px; left: -8px; margin-right: -10px; -moz-user-select: all;
+}
+
+span.note {
+background-image: url(chrome://celtx/skin/note.png); background-color: rgb(253, 247, 161);
+}
+
+span.media {
+background-image: url(chrome://celtx/skin/picture.png);
+}
+
+}
+
+body[showrevisionmarks="false"] span[revision], body[showrevisionmarks="1"] span[revision]:not([revision~="1"]), body[showrevisionmarks="2"] span[revision]:not([revision~="2"]), body[showrevisionmarks="3"] span[revision]:not([revision~="3"]), body[showrevisionmarks="4"] span[revision]:not([revision~="4"]), body[showrevisionmarks="5"] span[revision]:not([revision~="5"]), body[showrevisionmarks="6"] span[revision]:not([revision~="6"]), body[showrevisionmarks="7"] span[revision]:not([revision~="7"]), body[showrevisionmarks="8"] span[revision]:not([revision~="8"]), body[showrevisionmarks="9"] span[revision]:not([revision~="9"]), body[showrevisionmarks="10"] span[revision]:not([revision~="10"]), body[showrevisionmarks="11"] span[revision]:not([revision~="11"]), body[showrevisionmarks="12"] span[revision]:not([revision~="12"]), body[showrevisionmarks="13"] span[revision]:not([revision~="13"]), body[showrevisionmarks="14"] span[revision]:not([revision~="14"]), body[showrevisionmarks="15"] span[revision]:not([revision~="15"]), body[showrevisionmarks="16"] span[revision]:not([revision~="16"]), body[showrevisionmarks="17"] span[revision]:not([revision~="17"]), body[showrevisionmarks="18"] span[revision]:not([revision~="18"]), body[showrevisionmarks="19"] span[revision]:not([revision~="19"]), body[showrevisionmarks="20"] span[revision]:not([revision~="20"]), body[showrevisionmarks="21"] span[revision]:not([revision~="21"]), body[showrevisionmarks="22"] span[revision]:not([revision~="22"]), body[showrevisionmarks="23"] span[revision]:not([revision~="23"]), body[showrevisionmarks="24"] span[revision]:not([revision~="24"]), body[showrevisionmarks="25"] span[revision]:not([revision~="25"]), body[showrevisionmarks="26"] span[revision]:not([revision~="26"]), body[showrevisionmarks="27"] span[revision]:not([revision~="27"]), body[showrevisionmarks="28"] span[revision]:not([revision~="28"]), body[showrevisionmarks="29"] span[revision]:not([revision~="29"]), body[showrevisionmarks="30"] span[revision]:not([revision~="30"]), body[showrevisionmarks="31"] span[revision]:not([revision~="31"]), body[showrevisionmarks="32"] span[revision]:not([revision~="32"]), body[showrevisionmarks="33"] span[revision]:not([revision~="33"]), body[showrevisionmarks="34"] span[revision]:not([revision~="34"]), body[showrevisionmarks="35"] span[revision]:not([revision~="35"]), body[showrevisionmarks="36"] span[revision]:not([revision~="36"]), body[showrevisionmarks="37"] span[revision]:not([revision~="37"]), body[showrevisionmarks="38"] span[revision]:not([revision~="38"]), body[showrevisionmarks="39"] span[revision]:not([revision~="39"]) {
+background-color: inherit;
+}
+
+span[revision~="colour1"] {
+background-color: rgb(160, 255, 255);
+}
+
+span[revision~="colour2"] {
+background-color: rgb(255, 160, 255);
+}
+
+span[revision~="colour3"] {
+background-color: rgb(255, 255, 160);
+}
+
+span[revision~="colour4"] {
+background-color: rgb(160, 255, 160);
+}
+
+span[revision~="colour5"] {
+background-color: rgb(255, 215, 0);
+}
+
+span[revision~="colour6"] {
+background-color: rgb(255, 170, 105);
+}
+
+span[revision~="colour7"] {
+background-color: rgb(255, 160, 160);
+}
+
+.softbreak {
+display: none ! important;
+}
+
+.character:before, .sound:before, .music:before, .voice:before {
+display: none ! important;
+}
+
+p.sceneheading:before {
+content: 'Page ' counter(scenecountl, decimal);
+}
+
+p.sceneheading[ordinal]:before {
+content: 'Page ' attr(ordinal);
+}
+
+p.shot:before {
+content: 'Panel ' counter(shotcount, decimal);
+}
+
+p.shot[ordinal]:before {
+content: 'Panel ' attr(ordinal);
+}
+
+p.caption:before {
+content: 'Caption';
+}
+
+body {
+font-family: monospace; background-color: white;
+}
+
+p {
+margin-top: 0em; margin-bottom: 1em;
+}
+
+p.sceneheading:before {
+counter-increment: scenecountl; font-weight: bold; display: block; margin-bottom: -1.1em;
+}
+
+p.shot:before {
+counter-increment: shotcount; font-weight: bold; display: block; margin-bottom: -1.1em;
+}
+
+p.caption:before {
+display: block; font-weight: bold; margin-bottom: -1.1em;
+}
+
+p.character {
+text-transform: uppercase;
+}
+
+p.character p.parenthetical {
+margin-top: -1em;
+}
+
+p.character p.dialog {
+margin-top: -1em;
+}
+
+p.parenthetical {
+margin-bottom: 0em;
+}
+
+p.dialog p.parenthetical {
+margin-top: -1em;
+}
+
+@media print {
+body {
+margin: 0px; padding: 0px; font-size: 12pt;
+}
+
+p {
+margin-left: 2.2in; margin-right: 1.15in;
+}
+
+p.sceneheading {
+margin-left: 1.7in;
+}
+
+p.sceneheading:before {
+margin-left: -1.2in;
+}
+
+p.shot {
+margin-left: 1.95in;
+}
+
+p.shot:before {
+margin-left: -1.2in;
+}
+
+p.caption {
+margin-left: 2.2in;
+}
+
+p.caption:before {
+margin-left: -1.2in;
+}
+
+p.character {
+margin-left: 3.2in;
+}
+
+p.parenthetical {
+margin-left: 2.7in; margin-right: 2.2in;
+}
+
+}
+
+@media screen {
+body {
+margin: 20px 0px 0px; padding: 0px; font-size: 10pt; width: 560px;
+}
+
+p {
+margin-left: 140px; margin-right: 40px;
+}
+
+p.sceneheading {
+margin-left: 100px;
+}
+
+p.sceneheading:before {
+margin-left: -70px;
+}
+
+p.shot {
+margin-left: 120px;
+}
+
+p.shot:before {
+margin-left: -70px;
+}
+
+p.caption {
+margin-left: 140px;
+}
+
+p.caption:before {
+margin-left: -70px;
+}
+
+p.character {
+margin-left: 220px;
+}
+
+p.parenthetical {
+margin-left: 180px; margin-right: 160px;
+}
+
+}
+
+  </style>
+</head>
+<body>
+<p class="sceneheading" id="O9pejpe0">INTRO - The Family Business<br>
+</p>
+<p id="Lq5Ceie0" class="shot">A&nbsp;young man stands upright and alert by a
+brightly lit exterior wall.&nbsp;He is smartly dressed in waistcoat, shirt and
+tie. His short dark hair is swept back and to one side, framing a youthful,
+handsome face. A name badge pinned to his breast pocket reads, "MARTIN". A
+small podium stands beside him, it’s surface littered with papers, business
+cards and a clunky looking cell phone.&nbsp;</p>
+<p class="caption">"The family you came from isn't as important as the family
+you're going to."</p>
+<p id="Lq5C8he0" class="shot">Some 10 feet above Martin, a neon sign, fixed
+high up to the wall, blazes the words "TOMMY'S CLUB CASINO. GIRLS, SLOTS,
+POKER, $$$", bathing Martin in it's multicolored light. Martin checks his wrist
+watch anxiously.</p>
+<p class="caption">"At least, that's what somebody once told me."</p>
+<p id="ibnbAJe0" class="shot">Nearby in the doorway stands the proprietor
+himself, Tommy. A rather swarthy looking gentleman, he holds open the door with
+one arm, looking out into the night, slightly pensive. He is casually dressed,
+in polo shirt and slacks, yet carries with him a formidable air.&nbsp;He has a
+Mediterranean look - tanned and toned - and could be anywhere between 35 and 55.</p>
+<p class="caption">"My uncle Tommy put me to work as a valet as soon as I was
+old enough to drive."<br>
+</p>
+<p id="rhsbrA20" class="shot">View from behind steering wheel of a car. A
+Mercedes badge on the hood. Two pudgy hands grasp the wheel, their fingers
+adorned with large, ugly rings. The Mercedes approaches the casino entrance. A
+sign by the curbside reads ‘STOP HERE FOR VALET PARKING’.<br>
+</p>
+<p class="caption">"I've always loved cars. I've had a fascination with them
+ever since I was a young boy."</p>
+<p id="Lq5Cfie0" class="shot">The Mercedes is now stationary by the curb,
+driver side door open. The driver, Dick, is now out of the car and tosses the
+keys to Martin. Martin is already braced for the catch. Dick is old and portly,
+with a wheezing, red face. His cowboy-style attire is clearly one size too
+small. Cream trousers, cream shirt. Brown sweat stains. The man oozes sleaze.<br>
+</p>
+<p class="caption">"Some say it's a morbid fascination."</p>
+<p class="character">DICK<br>
+</p>
+<p class="dialog">Take good care of it, boy.<br>
+</p>
+<p id="Lq5C4ie0" class="shot">Dick follows Tommy through the entrance. There is
+no greeting between the two men. From behind them comes the roar of the car
+engine and screech of tires.</p>
+<p class="caption">"Everyone had heard the story of how my dad&nbsp;died."</p>
+<p class="character">SFX</p>
+<p class="dialog">VROOM!</p>
+<p id="Lq5Ceje0" class="shot">Dick turns, his face flustered, red and angry.
+The car screeches off. Dick curses under his breath. A wry smile plays on the
+lips of Tommy.<br>
+</p>
+<p class="character">DICK<br>
+</p>
+<p class="dialog">Little bastard!<br>
+</p>
+<p class="caption">"And that my uncle Tommy raised me as his own."</p>
+<p class="sceneheading" id="hawe3150">INTRO - Home Sweet Home</p>
+<p id="Lq5CGje0" class="shot">The Mercedes halts at a parking garage gate.
+Martin's hand reaches out of the driver side window, inserting a card into
+the&nbsp;machine.</p>
+<p class="caption">"He gave me a roof over my head."</p>
+<p id="Lq5Cgje0" class="shot">The silver car accelerates through the gate, it's
+tires screeching, into a high ceilinged parking garage. Bulky pillars support
+the concrete structure. There are&nbsp;cars parked on either side.</p>
+<p class="caption">"With all the cars I ever wanted."</p>
+<p class="character">SFX</p>
+<p class="dialog">SCREECH!</p>
+<p id="Mq5Cdje0" class="shot">View from bottom of down-ramp as the large,
+silver car descends the&nbsp;incline. The bright glare of the headlights
+sweeping aside the darkness below.</p>
+<p class="caption">"I even have my own basement."</p>
+<p class="character"></p>
+<p class="character"></p>
+<p id="cMSKEypGwUSt" class="shot">The basement appears to be a converted
+workshop, containing all kinds of cars, bikes and assorted machinery in various
+states of repair.</p>
+<p class="caption">"Nobody ever disturbs me down there."</p>
+<p id="Mq5Ccje0" class="shot">In an illuminated corner of the parking garage
+stands a huge corrogated metal shipping container. A small wooden placard hangs
+by string on the container's makeshift door, it reads: "HOME SWEET HOME".&nbsp;</p>
+<p class="caption">"I mostly have the place to myself."</p>
+<p id="Mq5Chke0" class="shot">As the car slows to a halt, we see a closeup of
+the spinning gyration of the hub cap. It's polished silver surface reflects the
+hazy form of a person standing by the car.</p>
+<p class="caption">"Mostly."</p>
+<p class="sceneheading" id="lQweB4c0">INTRO - Queen of Diamonds</p>
+<p id="7IMbLnf0" class="shot">A&nbsp;roulette wheel, birds-eye-view, the ball
+nestled in the number 6.<br>
+</p>
+<p class="caption">"I'm too young to work in the casino."</p>
+<p id="PJMbi970" class="shot">The people at the table cheer loudly, throw their
+arms in the air, and hug each other. A few dejected souls hold their heads in
+their hands, slumped over the table in despair.</p>
+<p id="v5fT3balyD1L" class="caption">"Too young too gamble. Too young to drink."<br>
+</p>
+<p id="Mq5CFke0" class="shot">At a nearby blackjack table, Dick sits on a stool
+surveying his two cards. His face is a look of disgust. He is a little drunk. A
+large tumbler of tequila sits on the table by his left hand.&nbsp;Dick raps his
+knuckles on the table, signaling the dealer for another twist of the cards.</p>
+<p id="YCyKJ0S76T39" class="caption">"The place is full of addicts, crooks,
+perverts, you name it."<br>
+</p>
+<p class="character">DICK<br>
+</p>
+<p class="dialog">Hit me. C'mon. Hit me you fuck.</p>
+<p class="character"></p>
+<p id="Mq5Cike0" class="shot">The dealer turns another card. It's the Queen of
+Diamonds. Dick is bust.<br>
+</p>
+<p class="caption">"They kind of became my extended family."</p>
+<p class="character">DEALER</p>
+<p class="dialog">Not your night, sir. Why don't you take a break?</p>
+<p class="character"></p>
+<p id="DHMbPic0" class="shot">This only serves to enrage Dick further, who
+stands up and leans forward as if intending to grab hold of the dealer on the
+other side of the table. At the same time, a woman, dressed all in black,
+places her hand on the empty seat beside Dick.</p>
+<p class="caption">"Nobody gets to choose their&nbsp;family, do they?"</p>
+<p class="character">DICK</p>
+<p id="u3sOSdhcfUde" class="dialog">A break!? I'll break your god damn...&nbsp;</p>
+<p id="19gCNjc0" class="shot">Dick now notices her presence. She has now seated
+herself in the chair beside Dick. She flashes him a quick smile, effectively
+diffusing the situation with the dealer. Dick, bleary-eyed now, looks her up
+and down without any pretense at subtlety. Her face is heavy with makeup. She
+wears a slender, high-neckline black cocktail dress. A string of diamonds lie
+across her neck. Her hair is shoulder-length and blond.</p>
+<p class="caption">"So, anyway, Dick here was the casino PR man. He'd take
+photos, arrange events, that kind of thing."</p>
+<p id="Mq5C1le0" class="shot">Dick, still not taking his eyes of Catherine,
+signals for the waitress' attention, with a loud snap of his fingers.<br>
+</p>
+<p class="caption">"Everyone knew he was a pervert and a voyeur."</p>
+<p class="character">DICK</p>
+<p class="dialog">Drinks! Drinks for my friend! And while you're at it, get me
+another one too!</p>
+<p class="sceneheading" id="lzyeP3a0">INTRO - Devil in Disguise</p>
+<p id="Mq5COle0" class="shot">Inside the parking garage. It's dark. We see
+Dick's silver mercedes looming in the foreground. A wide view as Dick and
+Catherine stumble arm-in-arm down the incline of the ramp. Dick has had too
+much to drink. Catherine supports his weight with apparent ease.</p>
+<p class="caption">"So it wasn't too difficult for Catherine to get him right
+where she wanted."</p>
+<p class="character">DICK</p>
+<p class="dialog">Where the hell are we going? I can't see a thing down here.<br>
+</p>
+<p id="nyXQeKmoei4E" class="shot">View from inside the car, through the driver
+side window as Catherine unlocks the car.</p>
+<p class="caption">"The fat sleazeball was practically on a leash."</p>
+<p class="character">DICK</p>
+<p class="dialog">We shouldn't be down here. That little freak will catch us.</p>
+<p id="Mq5Cxle0" class="shot">Closeup of Catherine's face. Her left eye and
+cheek twitching noticeably.<br>
+</p>
+<p class="character">DICK</p>
+<p class="dialog">Hey, how did you get my key?</p>
+<p id="Mq5CNle0" class="shot">Catherine is now in the driver seat. She holds
+one finger up to her lips, shushing him, and pats her other hand on the
+passenger seat.</p>
+<p class="caption">"Of course the alcohol helped."</p>
+<p class="character">DICK</p>
+<p class="parenthetical">(chuckling)</p>
+<p class="dialog">Ooooooooohhh. Yes, anything you say, my dear.</p>
+<p class="dialog"></p>
+<p id="Mq5Cdle0" class="shot">Dick is now seated in the car. Catherine reaches
+over him for his seat belt</p>
+<p class="caption">"It was all she could do not to gag from the pig's putrid
+smell of alcohol and sweat."</p>
+<p class="character">DICK</p>
+<p class="dialog">Is this some kind of kinky shit?</p>
+<p class="dialog"></p>
+<p id="Mq5C3le0" class="shot">Closeup of seat-belt clicking into place.</p>
+<p class="caption">"But she had business to attend to."</p>
+<p class="character">DICK</p>
+<p class="parenthetical">(slobbering)</p>
+<p class="dialog">Yes, yes. Hey, this thing's a bit tight for me.</p>
+<p id="Unl47MveQRY3" class="shot">Suddenly the driver side door is flung open
+and hands reach in grabbing Catherine, as Dick continues to&nbsp;struggle with
+his seat-belt.</p>
+<p class="caption">"But of course things didn't go quite to plan."</p>
+<p class="character">DICK</p>
+<p class="dialog">Catherine?</p>
+<p class="sceneheading" id="lHsgae40">INTRO - Under the skin</p>
+<p id="Mq5CKle0" class="shot">Catherine lands heavily with a thud onto the
+cold, hard floor. The mystery assailant is shrouded in darkness.<br>
+</p>
+<p class="caption">"She'd&nbsp;been followed."</p>
+<p class="character">DICK</p>
+<p class="dialog">Who's out there!?</p>
+<p id="Mq5Cale0" class="shot">Catherine is on her hands and knees as a kick
+strikes her in the side of the head sending her sprawling back to the floor.<br>
+</p>
+<p id="Mq5Crle0" class="shot">Her blonde hair slides from her head, falling to
+the floor beside her. A wig. Her real hair is short and dark, matted with
+glistening sweat.<br>
+</p>
+<p class="caption">"Her game was up."</p>
+<p class="character">ASSAILANT<br>
+</p>
+<p class="dialog">Well, well, well.</p>
+<p class="character">DICK</p>
+<p class="dialog">What's going on out there? Arrgh, this friggin' belt. I can't
+move!</p>
+<p id="NWaw5mXnd3OA" class="shot">In the darkness we see the assailant
+crouching over the prostrate form of Catherine.<br>
+</p>
+<p class="character">ASSAILANT<br>
+</p>
+<p class="dialog">What have we here?<br>
+</p>
+<p id="1b84dqL5Vp8W" class="shot">The assailant's hands rub at Catherine's face
+with a cloth. She murmurs, drifting in and out of consciousness.</p>
+<p class="caption">"Things got darker."</p>
+<p class="character">ASSAILANT<br>
+</p>
+<p class="dialog">A real beauty. A real Schlampe.<br>
+</p>
+<p class="character">DICK</p>
+<p class="dialog">Help! Help me out of here!</p>
+<p id="Mq5C1me0" class="shot">Closeup of Catherine's face, the makeup is now
+gone. It is the face of Martin. He is out cold.<br>
+</p>
+<p class="caption">"And that's the last thing I remember."</p>
+<p id="Qr7bto80" class="sceneheading">INTRO - Bang, bang<br>
+</p>
+<p id="Mq5Cime0" class="shot">The assailant strides over to the open driver
+side door. A gun in his right hand. It appears to be a Glock of some
+description. Dick senses the danger and cries out in alarm.<br>
+</p>
+<p class="character">DICK<br>
+</p>
+<p class="dialog">No! Don't do it! I'll do any...<br>
+</p>
+<p id="Mq5Cyme0" class="shot">The assailant unleashes a volley of bullets into
+the passenger side, silencing Dick instantly.</p>
+<p class="character">SFX</p>
+<p class="dialog">BANG! BANG! BANG!</p>
+<p id="Mq5CMme0" class="shot">The assailant strides back to Martin, who is
+still passed out on the floor.</p>
+<p id="Mq5Ccme0" class="shot">The handgun is now pointed at Martin's head.</p>
+<p id="Mq5Cqme0" class="shot">An all black panel. We see nothing but hear the
+crack of single gun shot.<br>
+</p>
+<p class="character">SFX<br>
+</p>
+<p class="dialog">CRACK!!!<br>
+</p>
+<p class="sceneheading" id="3CdIGac0">SJSU - Into the Void</p>
+<p id="Mq5C0me0" class="shot">All is dark. Literally, an all-black panel.</p>
+<p class="caption">3 days earlier.<br>
+</p>
+<p id="Mq5Chme0" class="shot">A voice comes from the darkness.</p>
+<p class="caption">"Wake up!"</p>
+<p id="Mq5C7me0" class="shot">Strange patterns and shapes form in the darkness</p>
+<p class="caption">"Hello, can you hear me?"</p>
+<p id="Mq5Cpme0" class="shot">From first person POV, a bleary image begins to
+form of a large, hulking figure towering above. The peripheral vision remains
+out of focus.</p>
+<p class="caption">"Wake up, god dammit!"</p>
+<p id="Mq5CGme0" class="shot">A cacophony of strange underwater-like voices
+erupt and sweep around the figure in surround sound.</p>
+<p class="character">SFX</p>
+<p class="dialog">Vrrrt-t-t-t-t-t-Vrrrt-t-t-t-t. Thwop-wop-wop-wop.
+Ssssssshhhhhhwwwww-w-w-w-w-w.</p>
+<p id="Mq5C4me0" class="shot">Two eyes and a face come sharply into focus. The
+face is that of a middle aged African American man. His expression is gravely
+serious.</p>
+<p class="sceneheading" id="4jdIfLa0">SJSU - Out of the Void</p>
+<p id="Mq5Cxme0" class="shot">Martin is slumped over a desk, asleep. The man
+berating him is his professor, CHARLES DEAKES. He is hunched down on his knees,
+almost comically for such a big man, so to be at eye-level with the comatose
+boy. All around him are the laughing, jeering faces of his classmates. In the
+background a wall placard declares in large writing: "Mechanical And Aerospace
+Engineering Department".</p>
+<p id="Mq5C2me0" class="shot">Martin opens his eyes blearily</p>
+<p class="character">DEAKES</p>
+<p class="dialog">Hello Martin.</p>
+<p id="Zt6rJzrnBCim" class="shot">COLIN, one of the students, bursts into song.
+He has a round face, red hair and a freckled complexion.</p>
+<p class="character">COLIN</p>
+<p class="parenthetical">(out of tune)</p>
+<p class="dialog">"Hello, is it me you're looking for?"</p>
+<p id="Mq5Cane0" class="shot">A further round of laughter ensues. We see
+closeups of the gleeful faces of the other students.<br>
+</p>
+<p id="Mq5Cpne0" class="shot">Closeup of alarm bell on the wall, it rings,
+signaling the end of class.</p>
+<p class="character">SFX</p>
+<p class="dialog">RING! RING! RING!<br>
+</p>
+<p class="sceneheading" id="ci5M1g80">SJSU - Bell</p>
+<p id="Mq5CPne0" class="shot">As the bell continues to wail, we see closeup of
+books and laptops being packed away into bags.</p>
+<p id="Mq5Chne0" class="shot">Martin covers his ears against the wailing of the
+bell.</p>
+<p id="Mq5Cwne0" class="shot">A view from under the desk of all the shuffling
+feet and commotion.</p>
+<p id="Mq5CMne0" class="shot">As the students start making their way towards
+the exits, Deakes yells out over the din of the bill.</p>
+<p class="character">DEAKES</p>
+<p class="dialog">Don't forget everybody. Term papers are due in exactly one
+week from now!</p>
+<p id="Mq5Cbne0" class="shot">Colin, the comedian student and friend of
+Martin's, walks past raising his hand for a high five.</p>
+<p class="character">COLIN</p>
+<p class="dialog">Way to go, buddy! You're my hero.</p>
+<p id="Mq5C2ne0" class="shot">We see a closeup of their hands as Martin accepts
+the high five sheepishly.</p>
+<p id="Mq5Cine0" class="shot">Two Hispanic girls approach Martin's desk, arm in
+arm, They wear tight sweaters. They are both smiling and giggling. Martin looks
+nervous.</p>
+<p class="sceneheading" id="F1j1A210">SJSU - Girls</p>
+<p id="Mq5CJne0" class="shot">The girls slide past Martin's desk. As they do,
+one of the girls places her hand on the desk, leaving something behind. It
+looks like she has a crush on Martin. Her friend looks on in amusement.</p>
+<p class="character">RAMONA</p>
+<p class="dialog">Hey Martin. I can't wait for tonight.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">Uh, wha..!!??</p>
+<p class="character">RAMONA</p>
+<p class="parenthetical">(giggling)</p>
+<p class="dialog">You know... the concert?</p>
+<p class="character">MARTIN</p>
+<p class="parenthetical">(blushing)</p>
+<p class="dialog">Oh... yeah... thanks. I mean..</p>
+<p class="character">ALICIA</p>
+<p class="dialog">Hee hee.</p>
+<p id="Mq5Cdne0" class="shot">Martin sits there dumbstruck, staring into space.
+The girls have gone just as quickly as they arrived.</p>
+<p id="Mq5Csne0" class="shot">Martin notices a small folded piece of pink paper
+on his desk.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">Hmm?</p>
+<p id="Kv7uIoszpAnf" class="shot">He reaches out for it, not noticing a dark
+shadow looming over him from behind.</p>
+<p id="Mq5C9ne0" class="shot">At the same time as Martin's hand covers the
+piece of paper, a large, dark hand clamps down on his shoulder startling him.</p>
+<p class="character">DEAKES</p>
+<p class="dialog">See me in my office in 5 mins.</p>
+<p id="Mq5C0oe0" class="shot">A closeup of Martin's face as his left eye and
+cheek twitches.</p>
+<p class="character">MARTIN</p>
+<p class="parenthetical">(to himself)</p>
+<p class="dialog">Ahhh, crap.</p>
+<p class="sceneheading" id="bjlLm7d0">HOSPITAL - A visitor</p>
+<p id="Mq5Csoe0" class="shot">Daytime. Establishing shot outside in plush,
+Victorian-esque hospital grounds. A large marble sign reads 'Napa State
+Hospital'</p>
+<p id="Mq5CJoe0" class="shot">Inside, a young female nurse leads an older,
+middle-aged lady away from the reception desk area. The young nurse wears a
+name badge "Emily". The receptionist is head-down in a trashy romantic novel.<br>
+</p>
+<p class="character">EMILY</p>
+<p class="dialog">Please follow me, Ms...?</p>
+<p class="character">KATHY<br>
+</p>
+<p class="dialog">Kathy. Please. Call me Kathy.</p>
+<p id="Mq5Cvoe0" class="shot">Closeup of bedside cabinet. A vase contains old
+dried up flowers. A knock is heard on the door.</p>
+<p class="character">SFX</p>
+<p class="dialog">KNOCK! KNOCK!<br>
+</p>
+<p id="Mq5CKoe0" class="shot">The door creaks open. Kathy peers into the room.
+Emily stays outside behind her.<br>
+</p>
+<p class="character">EMILY<br>
+</p>
+<p class="dialog">I'll leave you two alone. Please ring the bell if you need
+anything.</p>
+<p id="Mq5Caoe0" class="shot">From behind we see Kathy draw up a chair and sit
+down by the side of the hospital bed, obscuring the view of the bed's occupant.<br>
+</p>
+<p id="Mq5C2oe0" class="shot">Closeup of Kathy's face. Tears forming in her
+eyes. She has a kind, gentle face, but her hair is graying and wrinkles spread
+like tiny fissures along her face, as if some torment within is cracking open
+her very skin.</p>
+<p id="Mq5Cboe0" class="shot">A young woman lies prostrate on her back in a
+hospital bed. Her long hair is dark, thick and matted. Eyes firmly closed. A
+tube protrudes from her mouth and trails off to the machinery and equipment by
+her bedside, as do the various cables that snake out from under her bedsheets.</p>
+<p class="character">KATHY<br>
+</p>
+<p class="dialog">Hello Elizabeth, my dear. It's been a long time.</p>
+<p class="sceneheading" id="ngeIGIf0">SJSU - Deakes</p>
+<p id="Mq5Cwoe0" class="shot">Daytime. Establishing shot. We see a pleasant
+looking communal courtyard with park benches, a fountain and grass lawns. A
+large marble wall is engraved with the words 'San Jose State University'</p>
+<p id="Mq5COoe0" class="shot">Inside, two male, cauacasian youths slump against
+the corridor wall. They are dressed in tight, ripped jeans and black t-shirts.
+One of the youths carries a bundle of promotional concert flyers. One of the
+flyers is pinned to the wall. It reads "The Butchers. The Lost Boys. Tonight @
+the Blue Lagoon. 9pm". A third youth, female, and of Asian descent, stands on
+her tip-toes and peeks through the window of the door. Other students walk by
+without paying them much heed. It looks like they are waiting for someone. By
+the door hangs a small sign: "Professor Deakes".</p>
+<p id="Mq5Cnoe0" class="shot">A desk. Scattered across it, we see many sheets
+of paper filled with sketches and drawings, ranging from steam trains to
+parasols. The images have a unique steam punk style. There are also several
+sketches of ghosts and birds. This is our first insight into the inner workings
+of Martin's mind.</p>
+<p id="Mq5CGoe0" class="shot">Side view of desk. Deakes is sitting on one side,
+hands clasped. He stares sternly at Martin who is sitting across the desk,
+sipping a cup of strong coffee. In the background, against the wall is a large
+fish tank. Also on the shelves is a small picture frame, the picture shows a
+younger Deakes collecting his diploma alongside an old college buddy, Jeff
+Chapman. Through the door's window, two oriental eyes peer in from the outside
+corridor.</p>
+<p class="sceneheading" id="mJdssId0">SJSU - Deakes<br>
+</p>
+<p id="eNsVUBmaqMvh" class="shot">Closeup of Deakes as he breaks the silence.</p>
+<p class="character">DEAKES</p>
+<p class="dialog">Why are you doing this to yourself, Martin? You know...
+you're the best damn student this year. Heck you're the best damn student this
+decade!<br>
+</p>
+<p class="dialog"><span style="font-style: italic;">If</span>... you focus your
+efforts on your class work.<br>
+</p>
+<p class="dialog">What is it this time? Crazy Uncle? Crazy friends? Crazy <span
+ style="font-style: italic;">girl-</span>friends?</p>
+<p id="Mq5Cepe0" class="shot">Martin has him arms folded defensively.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">He's not crazy. Why do you think he's crazy? Why is it <span
+ style="font-style: italic;">every</span>body thinks he's crazy! C'mon!<br>
+</p>
+<p class="dialog">And my friends aren't crazy either. Ok? And I don't even <span
+ style="font-style: italic;">have</span> a girlfriend!</p>
+<p class="character">DEAKES</p>
+<p class="dialog">Listen, son. Whatever it is. Don't blow it this year.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">I'm <span style="font-style: italic;">not</span> your son.</p>
+<p id="Mq5Ctpe0" class="shot">Deakes appears a little hurt by Martin's rebuff.
+Martin looks a little ashamed of himself.<br>
+</p>
+<p class="character">MARTIN</p>
+<p class="dialog">Listen, I'm sorry. I didn't mean...</p>
+<p id="Mq5CIpe0" class="shot">Martin looks away and sighs. His gaze drawn to
+the photo on the shelf, next to the fish tank.</p>
+<p id="Mq5C8pe0" class="shot">Closeup of framed photo on shelf.<br>
+</p>
+<p class="character">DEAKES</p>
+<p class="dialog">You miss him, don't you? He was a good man, your father. We
+were pretty tight back then... me and him.<br>
+</p>
+<p class="parenthetical">(smiling wistfuly)<br>
+</p>
+<p class="dialog">Of course he was a lousy quarterback. And ohhh... he was
+terrible with the ladies. Hah! But, god damn, he knew how to tune an engine.
+And hell, he was the best driver I've... oh...well... I'm sorry Martin</p>
+<p id="Mq5Cmpe0" class="shot">Closeup of Martin. He smiles solemnly.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">It doesn't matter. I have a new family now.</p>
+<p class="character">DEAKES</p>
+<p class="dialog">'Family', huh? Well, you be careful Martin. They aren't all
+what they seem you know. Your dealing with crooks, and gamblers and bikers
+and.. and, well let's just say I don't see any of them down at church on
+Sunday, if you know what I mean.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">The family you come from isn't as important as the family
+you're going to have.</p>
+<p class="character">DEAKES</p>
+<p class="dialog">Huh? Who said that?</p>
+<p class="character">MARTIN</p>
+<p class="dialog">I don't remember who said it. I just remember it being said
+to me back then, is all.</p>
+<p class="character">DEAKES</p>
+<p class="dialog">Well. I hope they were right... but remember this... your
+assignment is due on my desk this time next week. 10am sharp. Don't let me down.<br>
+</p>
+<p id="Mq5CDpe0" class="shot">Closeup view of fish tank, next to the photo
+frame. There is a miniature sail boat bobbing up and down in the water.</p>
+<p class="character">DEAKES<br>
+</p>
+<p class="dialog">Oh, and I think your 'friends' are out there waiting for you.</p>
+<p class="sceneheading" id="moeI4840">BIG SUR - La Mer</p>
+<p id="ti3KVpbIEddM" class="shot">Daytime. View of the wide open sea from atop
+the cliffs. Two specks can be made out in the distance on the ocean. The
+scorching hot sun is burning up the horizon. A sign post reads "California 1.
+Pacific Coast Highway"</p>
+<p id="Mq5C9pe0" class="shot">We see a small motorboat proceeding towards the
+cliff face. Several men appear to be aboard. One man sits at either end, and
+two sit huddled together in the center, facing each other. A yacht can be seen
+behind them on the horizon.</p>
+<p id="Mq5Cspe0" class="shot">Closer view of boat. Two burly, heavyweight men
+sit at either end of the boat. Vadym and Matthias. They both sport crew-cuts
+and have the look of bodyguards or hired thugs of some sort. The other two men
+sit in the middle of the boat, facing each other. Jack wears a white suit and a
+hat, the other man, Tommy, looks to be naked from the waist up.</p>
+<p id="Mq5CMpe0" class="shot">Medium closeup of Jack. He has bright
+anemic-yellow hair underneath a fedora and a white plaster covering what looks
+like to be a recently broken nose. He looks pale and nervous.</p>
+<p id="Mq5Cdpe0" class="shot">Medium closeup of Tommy. He is wearing nothing
+but bright yellow swimming trunks. His hair is slicked back and he wears dark,
+black shades.</p>
+<p id="Mq5Cwpe0" class="shot">Tommy points to a spot at the base of the cliffs
+about 500 yards away. Vadym, the burly man at stern, holding the outboard
+motor, acknowledges with a silent, nod. He has short cropped, grey hair.
+Possibly in his late 50's. He has intelligent, cunning eyes.</p>
+<p class="sceneheading" id="Ct3Ln230">BIG SUR - Le Mepris</p>
+<p id="r7VbShvdgUsp" class="shot">Tommy is now smiling and looking generally
+thrilled with life as he looks out over the side of the boat. Jack looks glum
+and nervous.</p>
+<p class="character">TOMMY</p>
+<p class="dialog">Ah! La Mer! How beautiful. To sail over her waves is to sail
+across a thousand bountiful bosoms!</p>
+<p id="Mq5C2qe0" class="shot">Closeup as Tommy lights a cigarette and speaks
+out of the side of his mouth.</p>
+<p class="character">TOMMY</p>
+<p class="dialog">Of course, we're not sailing - it's a motorboat. But that's
+beside the point.</p>
+<p id="Mq5Ckqe0" class="shot">Tommy inhales his cigarette and looks away
+wistfully.</p>
+<p class="character">TOMMY</p>
+<p class="dialog">You know, Jack - my old friend. This reminds me of a scene
+from a movie. Le Mepris. You know what Le Mepris means?</p>
+<p id="Mq5Czqe0" class="shot">Closeup of Jack as he frowns and shakes his head.</p>
+<p class="character">TOMMY</p>
+<p class="dialog">It means 'contempt'. The story is of a beautiful partnership
+gone wrong. Very much like us, don't you think?</p>
+<p id="Mq5COqe0" class="shot">Closeup of Jack as he gulps and wipes away the
+beads of perspiration from his brow.</p>
+<p class="character">TOMMY</p>
+<p class="dialog">Before you got too greedy. Before you tried to fuck me over.</p>
+<p id="Mq5Ceqe0" class="shot">Tommy lowers his glasses and peers into Jack's
+eyes.</p>
+<p class="character">TOMMY</p>
+<p class="dialog">I was your Bridget Bardot, you dumb son of a bitch.</p>
+<p id="Mq5Csqe0" class="shot">Tommy snaps out of his nostalgia, and flicks away
+his cigarette into the sea.<br>
+</p>
+<p class="character">TOMMY</p>
+<p class="dialog">Ok boys, this is the spot. Vadym, guide us in.</p>
+<p class="sceneheading" id="eAiLkJe0">POLICE DEPT. - Bad Shot</p>
+<p id="Mq5C1qe0" class="shot">A hand polishing the barrel of a gun with a
+cloth. The gun is a Glock 22, standard police issue, all in black.<br>
+</p>
+<p id="Mq5Cjqe0" class="shot">Closeup of steel-grey eyes looking down the gun
+barrel.</p>
+<p id="Mq5Caqe0" class="shot">A flurry of gun fire erupts from the chamber.</p>
+<p class="character">SFX</p>
+<p class="dialog">BANG! BANG! BANG! BANG! BANG! BANG!</p>
+<p id="Mq5Cpqe0" class="shot">A human-shaped paper target is whisked forward on
+a mechanical pully-system towards the shooter. More gunshots go off in the next
+lane.</p>
+<p id="Mq5CFqe0" class="shot">Closeup of paper target held in hand. We see the
+target peppered with bullet holes, but not showing any signs of great accuracy.</p>
+<p class="sceneheading" id="r14Ocwc0">POLICE DEPT. - Introductions</p>
+<p id="Mq5Clqe0" class="shot">A door opens. A portly old policeman with a ruddy
+complexion enters the room, followed by a young female officer in tow. On the
+wall a large placard reads: 'City of Santa Cruz Police Department'</p>
+<p class="character">GREIG MCDoNALD<br>
+</p>
+<p class="dialog">Kurt! Don't ye know how to fire a gun yet?<br>
+</p>
+<p id="Mq5CDqe0" class="shot">We now see the face of the shooter. His face is
+cold and hard. His shortly cropped iron grey hair only serves to add to his
+imposing presence.<br>
+</p>
+<p class="character">KURT</p>
+<p class="dialog">Who's this?</p>
+<p class="character">GREIG</p>
+<p class="dialog">Now now, Kurt. Have ye forgotten yer manners? In front of a
+lady too!</p>
+<p id="Mq5C3qe0" class="shot">The woman steps forward and holds out her hand to
+Kurt. She has sharply defined cheekbones and a steely, determination about her.
+She wears her hair in a short bob, adding to her tomboyish appearance.</p>
+<p class="character">MELISSA</p>
+<p class="dialog">Melissa. Melissa Jenkins, sir. I was sorry to hear about your
+partner. I...<br>
+</p>
+<p id="Mq5Cmqe0" class="shot">Kurt ignores both her sentiment and her
+outstretched hand.<br>
+</p>
+<p class="character">KURT</p>
+<p class="dialog">This is no place for little ladies.<br>
+</p>
+<p id="Mq5Cdre0" class="shot">Closeup as Melissa's face swiftly reddens with
+anger and embarrassment.</p>
+<p id="Mq5Csre0" class="shot">Melissa recovers her wits and thinks quickly.</p>
+<p class="character">MELISSA</p>
+<p class="dialog">You're right...</p>
+<p id="Mq5CGre0" class="shot">Melissa reaches for her gun holster.<br>
+</p>
+<p class="character">KURT<br>
+</p>
+<p class="dialog">Verdammt!!!<br>
+</p>
+<p class="sceneheading" id="cELQBJ50">POLICE DEPT. - Good shot</p>
+<p id="Mq5Cgre0" class="shot">Melissa walks over to the next gun lane, she
+shoves aside the young officer standing there, unloosening her holster as she
+does so.<br>
+</p>
+<p class="character">MELISSA</p>
+<p class="dialog">Outta my way!<br>
+</p>
+<p id="Mq5Cxre0" class="shot">View from behind as Melissa takes up a shooting
+stance and fires off a full round of bullets into the paper target.</p>
+<p class="character">SFX</p>
+<p class="dialog">BANG! BANG! BANG! BANG! BANG! BANG!</p>
+<p id="Mq5CQre0" class="shot">The paper target now whisks towards her. Kurt and
+Greig look perplexed.</p>
+<p id="bwxbTFwSBuam" class="shot">Melissa takes down the paper target and
+thrusts it into the hands of the astonished young police officer, before
+storming towards the exit - her gun now back in it's holster.<br>
+</p>
+<p class="character">MELISSA</p>
+<p class="dialog">We don't need ladies who can't shoot straight now do we?<br>
+</p>
+<p id="Mq5C9re0" class="shot">The young police officer holds up the target. We
+see a heart shape formed by the bullet holes.</p>
+<p id="Mq5Core0" class="shot">Closeup as Greig smiles. A big gleeful smile.</p>
+<p class="character">GREIG</p>
+<p class="dialog">Oh, I think you two are going to get along famously.</p>
+<p id="Mq5CDre0" class="shot">Kurt frowns with despair as the situation dawns
+on him.</p>
+<p class="character">KURT</p>
+<p class="dialog">Himmel, arsch und Zwirn!</p>
+<p class="sceneheading" id="GDChf9f0">HOSPITAL - Storytelling</p>
+<p id="Mq5Ccre0" class="shot">A coffee cup, piled high with cigarette butts.<br>
+</p>
+<p id="Mq5Crre0" class="shot">Two pairs of hands, one laid on top of the other,
+clasped together. One pair of hands is wrinkled and stained with nicotine, the
+other hands are young yet ghastly pale.</p>
+<p id="Mq5CIre0" class="shot">Elizabeth's face. As lifeless as we saw her
+before.</p>
+<p class="character">KATHY</p>
+<p class="dialog">I just had to tell somebody, before.... before it's too late.</p>
+<p class="parenthetical"><br>
+</p>
+<p class="dialog">I can't go to the grave knowing the things I do. Keeping the <span
+ style="font-style: italic;">secrets</span> that I do.</p>
+<p class="parenthetical"><br>
+</p>
+<p class="dialog">I pray, in your heart, that you can forgive me.</p>
+<p id="Mq5C7re0" class="shot">Kathy bends down from her seat, and digs around
+in her handbag, looking for a new packet of cigarettes.</p>
+<p class="character">KATHY<br>
+</p>
+<p class="dialog">Oh damn. Where did I put that extra pack?</p>
+<p class="dialog">Excuse me dear, while I go and hunt down more cancer sticks.</p>
+<p class="parenthetical">(chuckling, morbidly)</p>
+<p class="dialog">They can't hurt me now, right?</p>
+<p id="Mq5C0se0" class="shot">As Kathy departs the room, a large black raven
+swoops down onto the window ledge.</p>
+<p id="Mq5Cise0" class="shot">The raven squawks twice, cocking it's head as it
+does so.</p>
+<p class="character">SFX</p>
+<p class="dialog">SQUAWK! SQUAWK!</p>
+<p id="Mq5Cxse0" class="shot">Closeup of Elizabeth's closed eyelids. There
+is&nbsp; flicker of movement.</p>
+<p class="sceneheading" id="zFMtlDb0">HOSPITAL - Flight</p>
+<p id="Mq5CMse0" class="shot">The raven spreads it's wings in preparation for
+flight.</p>
+<p id="Mq5Clse0" class="shot">Large, wide panel. We see the raven soar into the
+sky, it then plummets and twists and turns as it finds it's way through the
+pockets of wind.<br>
+</p>
+<p id="xAhCmk30" class="shot">In the distance, beyond the rolling green hills
+of Marin County, we can see the San Francisco skyline, slightly obscured by
+fog, and the Golden Gate Bridge.</p>
+<p class="sceneheading" id="G4iLo5e0">HIGHWAY 17 - Speed</p>
+<p id="Mq5C3se0" class="shot">Birds eye view of highway 17. Directly below we
+see a bus and several motorbikes amongst the steadily building rush-hour
+traffic.<br>
+</p>
+<p id="bR941CzK5dcf" class="shot">Front view of bus. The front of the bus reads
+"17 Express". We see an overweight female driver, dressed in blue uniform. Her
+lipstick is a garish red, her hair long, black and braided.<br>
+</p>
+<p id="Mq5Cdse0" class="shot">Inside, a passenger on the bus reading some kind
+of spiritual enlightenment book. The book title is Yoga Vasistha. All is calm
+and peaceful.</p>
+<p id="Mq5Cuse0" class="shot">Closeup of Martin's face, contorted with the wind
+as he speeds along the highway on his motorbike. He is wearing vintage leather
+goggles.</p>
+<p id="Mq5CNse0" class="shot">Martin looks over his shoulder. 3 other youths on
+bikes are close behind, in scattered formation, weaving through traffic.</p>
+<p id="goLAA9PCGbC1" class="shot">A black bike draws up level with Martin. We
+see the rider, Martin's friend Brian, grinning through the gap in his visor.
+Martin grins back.</p>
+<p class="sceneheading" id="3n01tDb0">HIGHWAY 17 - Pursuit</p>
+<p id="Mq5CEse0" class="shot">Side view, low down of Martin on his bike. We see
+his bike in full detail. The engine purring.<br>
+</p>
+<p id="PanAEWuH8qqp" class="shot">Martin draws up about 50 yards behind the bus
+and closing fast. He is in the center of three lanes. A sign on the inside road
+says "lanes merge 500 yards".</p>
+<p id="yj9mwasnpMB2" class="shot">Martin moves over to the outside fast lane.
+But his way seems blocked by traffic.</p>
+<p id="Mq5Cdte0" class="shot">With the fast lane blocked, Martin falls back and
+then hits the accelerator to speed past the bus on the empty inside lane. We
+see a sign saying lane ends 100 yards.</p>
+<p id="Mq5Ctte0" class="shot">Martin gets half way alongside the bus. Up ahead
+less than 20 yards, the road merges into concrete barriers.<br>
+</p>
+<p id="Mq5CJte0" class="shot">Martin grits his teeth and stamps on the
+accelerator...</p>
+<p class="sceneheading" id="Ek21iPa0">HIGHWAY 17 - Close shave</p>
+<p id="Mq5CLte0" class="shot">At the very last second Martin quickly dips his
+bike and cuts inside to avoid the low concrete wall by mere inches, but in
+doing so cuts in front of the bus.</p>
+<p id="Mq5Chte0" class="shot">The passenger on the bus is thrown forward -
+grabbing a rail to steady himself - his book flying from his hands.</p>
+<p class="character">pASSENGER</p>
+<p class="dialog">Heeeeeyyyy!<br>
+</p>
+<p id="Mq5Cbte0" class="shot">Front view of Martin on bike with bus behind him.
+The irate driver slamming her fist down onto the horn.<br>
+</p>
+<p class="character">SFX<br>
+</p>
+<p class="dialog">Beeeeeeeep! Beeeeeeep!</p>
+<p id="9F1C4PIQo2BU" class="shot">Martin looks over his shoulder. Brian and
+Alex are in the fast lane now, but blocked by the traffic.<br>
+</p>
+<p class="character">MARTIN</p>
+<p class="dialog">Wooooooooooohooooooo!</p>
+<p id="ylbUOZoX9H2b" class="shot">Martin begins to pump his fist in
+celebration, but Lee suddenly swoops out of nowhere to pull alongside a
+startled Martin. She is grinning like the cat that caught the cream.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">How the...?!!!</p>
+<p id="dgEwectmevIT" class="shot">Closeup of a police siren and flashing lights.</p>
+<p class="character">SFX</p>
+<p class="parenthetical">(siren)</p>
+<p class="dialog">Woooo--woooo--wooooo--wooooo</p>
+<p id="Mq5Cpte0" class="shot">Lee blows Martin a kiss, she has already
+accelerated away, leaving him behind for dust.</p>
+<p class="character">MARTIN</p>
+<p class="dialog">Crap!</p>
+<p id="N7vg7Kd0" class="sceneheading">HIGHWAY PATROL - Snared<br>
+</p>
+<p id="Mq5C0te0" class="shot">Kurt and Melissa sit upfront in the police car.
+it is parked in the lay by.<br>
+</p>
+<p id="Mq5Cmte0" class="shot">From their view through the windscreen we see the
+lonesome figure of Martin, helmet still on, but his gloves off - already thrown
+dejectedly to the floor.</p>
+<p id="ml7e2220" class="sceneheading">THE SITUATION<br>
+</p>
+<p id="Mq5Csue0" class="shot">Jack sits huddled, alone on a rock. He is naked
+now, except for his hat placed over his groin. Waves crash around him. The boat
+containing Vadym, Matthias and Tommy disappearing into the distance.<br>
+</p>
+<p id="Mq5CKue0" class="shot">Kathy sits alone in a restroom cubicle. She sobs
+uncontrollably, her heads in her hands. At her feet lies her over-sized
+handbag, it's gold clasp left ajar.<br>
+</p>
+<p id="3OhCxn50" class="shot">Deakes sits in his office, the photograph of
+Martin's father now held in his hand as he inspects it closely.<br>
+</p>
+<p id="k0hCap70" class="shot">We see gloved hands operating a keyboard and
+mouse, above which a flickering computer terminal displays the words
+'Permission Denied - Restricted Access Records - Melissa Jenkins'.<br>
+</p>
+<p id="C3hCg290" class="shot">Ramona and Alicia stand side-by-side facing a
+mirror, they sing and dance with glee as they look to be preparing themselves
+for a night of festivity ahead.<br>
+</p>
+<p id="nEfCId70" class="shot">On a quiet side street, Brian, Alex and Lee
+unload music equipment from the back of a cramped van. The bass drum is daubed
+with the words, "The Lost Boys".<br>
+</p>
+<p id="Mq5Caue0" class="shot">Finally, we see Kurt striding purposefully away
+from the police car, his hand flexing menacingly over the police stick which
+hangs from his belt.</p>
+</body>
+</html>

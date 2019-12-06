@@ -1,0 +1,872 @@
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <title>DEATH VALET ISSUE #3</title>
+  <style type="text/css">body {
+counter-reset: scenecountl scenecountr shotcount charcount pages 1;
+}
+
+.sceneheading {
+counter-reset: shotcount;
+}
+
+@media print {
+body {
+line-height: 1;
+}
+
+}
+
+@media screen {
+span.camera, span.lights, span.electrics, span.opticalfx {
+color: rgb(51, 153, 0);
+}
+
+span.music, span.sound, span.soundfx {
+color: rgb(102, 51, 0);
+}
+
+span.cgi, span.construction, span.painting, span.set, span.setdressing, span.specialfx {
+color: rgb(0, 51, 204);
+}
+
+span.hair, span.makeup, span.props, span.wardrobe, span.weapons {
+color: rgb(153, 0, 255);
+}
+
+span.equip, span.mechfx, span.stunts {
+color: rgb(255, 102, 0);
+}
+
+span.animals, span.equip, span.greenery, span.handler, span.livestock, span.misc, span.vehicles {
+color: rgb(255, 51, 255);
+}
+
+span.actor, span.cast, span.crew, span.extras {
+color: rgb(255, 0, 0);
+}
+
+span.addlabour, span.location, span.prodnotes, span.security {
+color: rgb(238, 187, 0);
+}
+
+[active="true"] {
+background: yellow none repeat scroll 0% 0%; color: black; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;
+}
+
+span[token="true"] {
+background-image: url(chrome://celtx/skin/token.png); background-repeat: no-repeat; background-position: center center; min-height: 12px; margin-left: 2px; margin-right: 2px; padding-left: 10px; -moz-user-select: text;
+}
+
+span.note, span.media {
+background-repeat: no-repeat; background-position: center center; min-height: 12px; margin-left: 2px; padding-left: 10px; z-index: 1; position: relative; top: -8px; left: -8px; margin-right: -10px; -moz-user-select: all;
+}
+
+span.note {
+background-image: url(chrome://celtx/skin/note.png); background-color: rgb(253, 247, 161);
+}
+
+span.media {
+background-image: url(chrome://celtx/skin/picture.png);
+}
+
+}
+
+body[showrevisionmarks="false"] span[revision], body[showrevisionmarks="1"] span[revision]:not([revision~="1"]), body[showrevisionmarks="2"] span[revision]:not([revision~="2"]), body[showrevisionmarks="3"] span[revision]:not([revision~="3"]), body[showrevisionmarks="4"] span[revision]:not([revision~="4"]), body[showrevisionmarks="5"] span[revision]:not([revision~="5"]), body[showrevisionmarks="6"] span[revision]:not([revision~="6"]), body[showrevisionmarks="7"] span[revision]:not([revision~="7"]), body[showrevisionmarks="8"] span[revision]:not([revision~="8"]), body[showrevisionmarks="9"] span[revision]:not([revision~="9"]), body[showrevisionmarks="10"] span[revision]:not([revision~="10"]), body[showrevisionmarks="11"] span[revision]:not([revision~="11"]), body[showrevisionmarks="12"] span[revision]:not([revision~="12"]), body[showrevisionmarks="13"] span[revision]:not([revision~="13"]), body[showrevisionmarks="14"] span[revision]:not([revision~="14"]), body[showrevisionmarks="15"] span[revision]:not([revision~="15"]), body[showrevisionmarks="16"] span[revision]:not([revision~="16"]), body[showrevisionmarks="17"] span[revision]:not([revision~="17"]), body[showrevisionmarks="18"] span[revision]:not([revision~="18"]), body[showrevisionmarks="19"] span[revision]:not([revision~="19"]), body[showrevisionmarks="20"] span[revision]:not([revision~="20"]), body[showrevisionmarks="21"] span[revision]:not([revision~="21"]), body[showrevisionmarks="22"] span[revision]:not([revision~="22"]), body[showrevisionmarks="23"] span[revision]:not([revision~="23"]), body[showrevisionmarks="24"] span[revision]:not([revision~="24"]), body[showrevisionmarks="25"] span[revision]:not([revision~="25"]), body[showrevisionmarks="26"] span[revision]:not([revision~="26"]), body[showrevisionmarks="27"] span[revision]:not([revision~="27"]), body[showrevisionmarks="28"] span[revision]:not([revision~="28"]), body[showrevisionmarks="29"] span[revision]:not([revision~="29"]), body[showrevisionmarks="30"] span[revision]:not([revision~="30"]), body[showrevisionmarks="31"] span[revision]:not([revision~="31"]), body[showrevisionmarks="32"] span[revision]:not([revision~="32"]), body[showrevisionmarks="33"] span[revision]:not([revision~="33"]), body[showrevisionmarks="34"] span[revision]:not([revision~="34"]), body[showrevisionmarks="35"] span[revision]:not([revision~="35"]), body[showrevisionmarks="36"] span[revision]:not([revision~="36"]), body[showrevisionmarks="37"] span[revision]:not([revision~="37"]), body[showrevisionmarks="38"] span[revision]:not([revision~="38"]), body[showrevisionmarks="39"] span[revision]:not([revision~="39"]) {
+background-color: inherit;
+}
+
+span[revision~="colour1"] {
+background-color: rgb(160, 255, 255);
+}
+
+span[revision~="colour2"] {
+background-color: rgb(255, 160, 255);
+}
+
+span[revision~="colour3"] {
+background-color: rgb(255, 255, 160);
+}
+
+span[revision~="colour4"] {
+background-color: rgb(160, 255, 160);
+}
+
+span[revision~="colour5"] {
+background-color: rgb(255, 215, 0);
+}
+
+span[revision~="colour6"] {
+background-color: rgb(255, 170, 105);
+}
+
+span[revision~="colour7"] {
+background-color: rgb(255, 160, 160);
+}
+
+.softbreak {
+display: none ! important;
+}
+
+.character:before, .sound:before, .music:before, .voice:before {
+display: none ! important;
+}
+
+p.sceneheading:before {
+content: 'Page ' counter(scenecountl, decimal);
+}
+
+p.sceneheading[ordinal]:before {
+content: 'Page ' attr(ordinal);
+}
+
+p.shot:before {
+content: 'Panel ' counter(shotcount, decimal);
+}
+
+p.shot[ordinal]:before {
+content: 'Panel ' attr(ordinal);
+}
+
+p.caption:before {
+content: 'Caption';
+}
+
+body {
+font-family: monospace; background-color: white;
+}
+
+p {
+margin-top: 0em; margin-bottom: 1em;
+}
+
+p.sceneheading:before {
+counter-increment: scenecountl; font-weight: bold; display: block; margin-bottom: -1.1em;
+}
+
+p.shot:before {
+counter-increment: shotcount; font-weight: bold; display: block; margin-bottom: -1.1em;
+}
+
+p.caption:before {
+display: block; font-weight: bold; margin-bottom: -1.1em;
+}
+
+p.character {
+text-transform: uppercase;
+}
+
+p.character p.parenthetical {
+margin-top: -1em;
+}
+
+p.character p.dialog {
+margin-top: -1em;
+}
+
+p.parenthetical {
+margin-bottom: 0em;
+}
+
+p.dialog p.parenthetical {
+margin-top: -1em;
+}
+
+@media print {
+body {
+margin: 0px; padding: 0px; font-size: 12pt;
+}
+
+p {
+margin-left: 2.2in; margin-right: 1.15in;
+}
+
+p.sceneheading {
+margin-left: 1.7in;
+}
+
+p.sceneheading:before {
+margin-left: -1.2in;
+}
+
+p.shot {
+margin-left: 1.95in;
+}
+
+p.shot:before {
+margin-left: -1.2in;
+}
+
+p.caption {
+margin-left: 2.2in;
+}
+
+p.caption:before {
+margin-left: -1.2in;
+}
+
+p.character {
+margin-left: 3.2in;
+}
+
+p.parenthetical {
+margin-left: 2.7in; margin-right: 2.2in;
+}
+
+}
+
+@media screen {
+body {
+margin: 20px 0px 0px; padding: 0px; font-size: 10pt; width: 560px;
+}
+
+p {
+margin-left: 140px; margin-right: 40px;
+}
+
+p.sceneheading {
+margin-left: 100px;
+}
+
+p.sceneheading:before {
+margin-left: -70px;
+}
+
+p.shot {
+margin-left: 120px;
+}
+
+p.shot:before {
+margin-left: -70px;
+}
+
+p.caption {
+margin-left: 140px;
+}
+
+p.caption:before {
+margin-left: -70px;
+}
+
+p.character {
+margin-left: 220px;
+}
+
+p.parenthetical {
+margin-left: 180px; margin-right: 160px;
+}
+
+}
+
+  </style>
+</head>
+<body>
+<p id="4QAC5ab0" class="sceneheading">THE WRESTLER - SWEAT<br>
+</p>
+<p id="r1ACeu40" class="shot">In a dimly lit corner of the parking garage
+basement we see a wrestling ring. The fluorescent overheads lights flicker,
+creating long wide shadows of the ropes across the parking lot floor. Inside
+the ring, a large bulky man appears to be warming up, bouncing himself between
+the ropes.<br>
+</p>
+<p id="E4ACCc40" class="shot">Closeup as the man propels himself back off the
+ropes. It’s Vadym. Sweat flies off him. Vadym grimaces. He looks old and a
+little out of shape. His spandex leggings have seen better days.<br>
+</p>
+<p id="b7ACf3b0" class="shot">He charges across the canvas towards the ropes.<br>
+</p>
+<p id="BsBC2J70" class="shot">But instead of turning his back into the ropes,
+this time he slows his pace and holds up his arms to catch the top rope.<br>
+</p>
+<p id="pxBCaz40" class="shot">Vadym leans over, holding the ropes. He is
+panting for breath and clearly exhausted. Sweat drip from his forehead and
+splats on the canvas below.<br>
+</p>
+<p id="ezBCeo10" class="shot">Vadym takes a long swig from a water bottle and
+wipes his mouth with the back of his hand.<br>
+</p>
+<p class="character">VADYM<br>
+</p>
+<p class="dialog">I’m too old for this shit.<br>
+</p>
+<p id="JGBC4D00" class="sceneheading">THE WRESTLER - Sparring<br>
+</p>
+<p id="JGBCAD00" class="shot">Vadym throws his towel and water bottle over the
+side of the ring.<br>
+</p>
+<p id="0NBCkO40" class="shot">Vadym puts one leg through the ropes, as if about
+to leave.<br>
+</p>
+<p class="character">VOICE<br>
+</p>
+<p class="dialog">Not so fast.<br>
+</p>
+<p id="03BCbp70" class="shot">Vadym looks around, startled.<br>
+</p>
+<p class="character">VADYM<br>
+</p>
+<p class="dialog">Huh? Who said that?<br>
+</p>
+<p id="v8BCrp40" class="shot">The lights flicker. Vadym plants his foot back
+down into the ring, and puffs his chest out menacingly.<br>
+</p>
+<p class="character">VADYM<br>
+</p>
+<p class="dialog">Show yourself!<br>
+</p>
+<p id="FcBC0950" class="shot">Only a chilling laugh in response. Vadym is less
+sure of himself now.<br>
+</p>
+<p class="character">VOICE<br>
+</p>
+<p class="parenthetical">(laughing)<br>
+</p>
+<p class="dialog">Ah-ha-ha-ha-ha.</p>
+<p class="character">VADYM<br>
+</p>
+<p class="dialog">Matthias? Is that you? Quit fooling around.<br>
+</p>
+<p id="frBCnh30" class="shot">Something, or someone, grabs his arm - pulling it
+out wide to his body.<br>
+</p>
+<p class="character">VADYM<br>
+</p>
+<p class="dialog">Hm?<br>
+</p>
+<p id="lDBCsl90" class="shot">Vadym hurtles across the canvas, propelled by
+some unseen force. As he nears the ropes, the force releases his arm.<br>
+</p>
+<p class="character">VADYM<br>
+</p>
+<p class="dialog">Shit!<br>
+</p>
+<p id="oKBCiFb0" class="sceneheading">THE WRESTLER - Smackdown<br>
+</p>
+<p id="oKBCFFb0" class="shot">He smashes into the ropes. The ropes take his
+weight, absorbing the energy, and thrust him back out into the ring.<br>
+</p>
+<p id="gMBC1r00" class="shot">He is travelling fast, off balance - almost
+tripping forwards over his own feet.<br>
+</p>
+<p id="1PBCkF90" class="shot">The unseen force, lurking in shadow, takes hold
+off him again, throwing him forward with terrible momentum.<br>
+</p>
+<p id="GiBCqKd0" class="shot">He slams into the ropes once more, but the force
+this time is too much, his body shape all wrong.<br>
+</p>
+<p id="8kBCtHe0" class="shot">The ropes wrap around his neck, twisting his head
+grotesquely.<br>
+</p>
+<p id="NnBCwv70" class="shot">Vadym lets out a deathly wheeze, and his eyes
+loll back in his head. Life slips from his body.<br>
+</p>
+<p id="niKzJ400" class="sceneheading">BACKSTORY - The Good ol' Days<br>
+</p>
+<p id="85LzaGa0" class="shot">A young looking Tommy has his hands on the wheel
+of a convertible. The car winds it's way along a valley road, past orchards and
+fields. In the passenger seat is Jean. Her blonde hair wild in the wind. With
+their dark shades, the two of them together look like movie-stars. Or Bonnie
+&amp; Clyde.<br>
+</p>
+<p class="caption">"Tommy and your mother were childhood sweethearts you know.
+Oh they were inseparable"<br>
+</p>
+<p id="juLzygg0" class="shot">Sitting in the back of the same car, we see Jeff
+and Kathy. Although Kathy is beautiful and Jeff has his own rugged good looks,
+they couldn't be more different from the effortless glamour of Tommy &amp; Jean.<br>
+</p>
+<p class="caption">"<span style="font-style: italic;">We</span> were
+inseparable. All four of us, that summer."</p>
+<p id="0NMz7kc0" class="shot">View from side of car<br>
+</p>
+<p class="caption">"Those were good times. I miss those days."<br>
+</p>
+<p id="0GLza1d0" class="shot">Profile view of Jean in passenger seat of car<br>
+</p>
+<p class="caption">"But poor Jeff. He was head over heels with Jean"<br>
+</p>
+<p id="v2Lz5I50" class="shot">Closeup of Jeff, sitting behind the driver's
+seat, gazing across at Jean's profile</p>
+<p class="caption">"At times he couldn't stand to see her with him."<br>
+</p>
+<p id="MkLzMFa0" class="shot">Jean turns her head and smiles at Jeff<br>
+</p>
+<p class="caption">"Sometimes I think she enjoyed the attention"<br>
+</p>
+<p id="NvKzr070" class="shot">Closeup of Tommy glancing up at the rear-view
+mirror. He adjusts the mirror slightly with his hand. A sneer on his face.<br>
+</p>
+<p class="caption">"But Tommy was always watching her closely. Like a snake."<br>
+</p>
+<p id="hxKzyq10" class="sceneheading">BACKSTORY - Rebound<br>
+</p>
+<p id="M3LzJ020" class="shot">Kathy and Jean sit on a bed. Jean weeps
+profusely, her head buried in Kathy's shoulder and comforting embrace.<br>
+</p>
+<p class="caption">"One day, Tommy upped and left. Just like that. Not a sign,
+not a trace."<br>
+</p>
+<p id="s5Lz1xa0" class="shot">Closeup of Jean's blackened eye, her head still
+resting on the shoulder of Kathy<br>
+</p>
+<p class="caption">"He'd roughed her up pretty badly. It wasn't the first time.
+He could be a real piece of shit."<br>
+</p>
+<p id="oELznm70" class="shot">Closeup of finger pressing the outside button of
+a doorbell.<br>
+</p>
+<p id="sNLz9G40" class="shot">Jean is sitting on the sofa reading a book. She
+is huddled under a blanket. Her eye now much less black &amp; swollen.<br>
+</p>
+<p class="character">SFX<br>
+</p>
+<p class="dialog">Ding! Dong!</p>
+<p id="1fLzDPd0" class="shot">Close up of Jean's hand turning the door handle.</p>
+<p id="LlLzgsa0" class="shot">The door is now open and we see Jeff standing on
+the outside step. A bunch of flowers gripped tightly, nervously in his hand by
+his side. A shy, hopeful look etched across his face.<br>
+</p>
+<p class="caption">"Once it became clear Tommy wasn't coming back, Jeff made
+his move. Let's just say he didn't waste any time!"</p>
+<p id="CiMznq90" class="sceneheading">BACKSTORY - Marriage<br>
+</p>
+<p id="dnMzbna0" class="shot">Inside a small chapel, Jeff &amp; Jean kiss as
+they exchange rings in their wedding ceremony.<br>
+</p>
+<p class="caption">"To him it was simple. Jean was the girl of his dreams, and
+now his brother was out of the picture."<br>
+</p>
+<p id="xqMz5b80" class="shot">Jeff &amp; Jean stand outside the old run-down
+diner up on summit. Their estate agent in close attendance, clutching a
+clipboard jammed with paperwork.<br>
+</p>
+<p class="caption">"Jeff was full of dreams and idealism. They took out a loan
+and bought the old diner up on Summit."<br>
+</p>
+<p id="KeQAiC70" class="shot">Jeff &amp; Jean kissing and embracing. The agent
+looking on with a warm hearted smile over his horn-rimmed spectacles.<br>
+</p>
+<p class="caption">"The place was run down. Had been for years."<br>
+</p>
+<p id="2CQAGd10" class="shot">View of Jeff atop a step ladder, hammer in hand,
+knocking a nail into a new signpost, it reads “The Chapman Diner”. The diner is
+now re-furbished and looks open for business. Jean stands below, gazing
+upwards, one hand resting on her swollen belly, one hand over eyes protecting
+them from the glare of the sun.<br>
+</p>
+<p class="caption">"But Jeff worked on that place every day and night for
+months"<br>
+</p>
+<p id="fNqCBI20" class="shot">Jean lies in a hospital bed, in the latter stages
+of labour and now pushing hard. Jeff smooths her hair with his hand - his face
+a picture of utmost concern.<br>
+</p>
+<p class="caption">"And then of course you two came along. So perfect, like
+little mirror images of each other. A miracle. Two miracles!"<br>
+</p>
+<p id="pnqC0f10" class="shot">Jean lying in bed, a sweaty, exhausted mess. She
+cradles the two twins in her arms.<br>
+</p>
+<p class="caption">"The perfect family"<br>
+</p>
+<p id="F5QAJM90" class="sceneheading">BACKSTORY - Prodigal son<br>
+</p>
+<p id="F5QA1M90" class="shot">Jean stands outside the front doors of the
+mountain diner, hands on hips, looking out to the distance.<br>
+</p>
+<p class="caption">"And that's the way it stayed for years. Oh of course your
+mother and father had their ups and downs. The diner never really took off the
+way they wanted it to. Jean felt the strain. Four mouths to feed wasn't easy.
+But I always thought they were happy, more or less."<br>
+</p>
+<p id="3FrC1040" class="shot">A long convoy of construction trucks drive into
+the large area of wasteland by the diner.<br>
+</p>
+<p class="caption">"Then one day, guess who shows up out of nowhere?"<br>
+</p>
+<p id="JprCle10" class="shot">A man climbs down from the passenger side of one
+of the trucks. His hair is slicked back, he wears a smart, navy suit, in one
+hand is a hard hat.<br>
+</p>
+<p class="caption">"Yup, you guessed it...Tommy"<br>
+</p>
+<p id="M058r4f0" class="shot">View from behind Tommy, his hand on his hips as
+he surveys the land around him.<br>
+</p>
+<p class="caption">"He'd been gone over ten years. Lost all contact with us,
+save for the odd postcard from Reno or Las Vegas or the like. He never wrote
+anything on them."<br>
+</p>
+<p id="mnaAG940" class="shot">On a flickering tv monitor, we see Jean sitting
+by Elizabeth’s bedside, she stubs out her cigarette in a coffee cup, almost
+absent mindedly<br>
+</p>
+<p class="character">KATHY<br>
+</p>
+<p class="dialog">I think he was just letting us know he was still out there.
+Still alive.<br>
+</p>
+<p id="QcCCFEe0" class="sceneheading">THE MORGUE - John Doe<br>
+</p>
+<p id="QcCCdEe0" class="shot">Inside the city morgue, Greig McDonald, Melissa
+Jenkins &amp; Kurt King look down upon a body wrapped up in plastic.<br>
+</p>
+<p class="character">GREIG<br>
+</p>
+<p class="dialog">Fresh catch of the day!<br>
+</p>
+<p id="v2DC1ad0" class="shot">Melissa looks at Greig, appalled by his sense of
+humour.<br>
+</p>
+<p class="character">MELISSA<br>
+</p>
+<p class="dialog">This man might be somebody’s father. Have some decency, will
+you?<br>
+</p>
+<p class="character">GREIG<br>
+</p>
+<p class="dialog">Ah yes, excuse me, I’m sorry lassie. Gotta have a sense of
+humour you know.<br>
+</p>
+<p id="ghDCLof0" class="shot">Kurt is as cold and bleak as ever.<br>
+</p>
+<p class="character">KURT<br>
+</p>
+<p class="dialog">Where did you fish him out?<br>
+</p>
+<p id="elDCPlb0" class="shot">We flashback to a scene of the cadavar floating
+face down and naked in the ocean.<br>
+</p>
+<p class="character">GREIG<br>
+</p>
+<p class="dialog">Half-way down Big Sur. Washed up in some rock pool. We reckon
+he’s a vagrant. Still waiting on an ID, but it could take a while. Nothings
+come up in the system yet.<br>
+</p>
+<p class="character">MELISSA<br>
+</p>
+<p class="dialog">How would a vagrant get half-way down Big Sur without a ride?<br>
+</p>
+<p id="asDC9n50" class="shot">Close of Greig’s wry, almost sympathetic smile.<br>
+</p>
+<p class="character">GREIG<br>
+</p>
+<p class="dialog">You’re definitely not from round here, are you, lassie?<br>
+</p>
+<p id="2a9wPq50" class="sceneheading">THE CHAPEL - Sunday Service<br>
+</p>
+<p id="A8ew8h40" class="shot">A narrow wooden church, with steep angular sides,
+lies nestled in the redwoods - set back about 100 yards from the side of the
+road - imperceptible to most passerbys. It has no gates and not even a front
+door.<br>
+</p>
+<p id="24gwtie0" class="shot">A vintage, convertible sports car pulls into the
+driveway. Behind the wheel is Tommy, sharply dressed in italian wool suit. A
+thick scarf and leather gloves protect him from the morning chill.<br>
+</p>
+<p id="dDgLsaf0" class="shot">A closed circuit security camera, place high up
+in the trees, swivels onto Tommy's location<br>
+</p>
+<p id="P1gw8bd0" class="shot">Through a black and white security monitor, we
+see Tommy stepping out of his car, removing his gloves as he does so.<br>
+</p>
+<p id="BnpwCg80" class="shot">Tommy, out of his car now, approaches the open
+doorway. He looks casual and relaxed, a newspaper carried in one hand.<br>
+</p>
+<p id="ichwDcc0" class="shot">On a second screen we see Tommy walking towards
+the camera and into the building. The camera is placed low down at knee level,
+judging by the angle.<br>
+</p>
+<p class="character">UNKNOWN VOICE<br>
+</p>
+<p class="dialog">Fernandez. It's Tommy. Coming your way. Over.<br>
+</p>
+<p id="oihwkFe0" class="sceneheading">THE CHAPEL - Fernandez<br>
+</p>
+<p id="oihwJFe0" class="shot">Full panel. A man sits on a simple, nondescript
+wooden chair. He is dressed in plain medieval looking clothes - brown trousers,
+black pointed boots and loose white shirt. A strange witch like hat rests on
+his head from out of which twists long, knotted hair. It is difficult to tell
+where his hair ends and his beard begins. Beside him stand two rakish young
+girls, all dressed in long flowing white. Their long, unkempt hair obscuring
+their faces. They are maybe 17 or 18 years old.<br>
+</p>
+<p id="uOfLl720" class="sceneheading">THE CHAPEL - Water<br>
+</p>
+<p id="2DfLsK10" class="shot">The man known as Fernandez twists his beard
+absently.<br>
+</p>
+<p class="character">FERNANDEZ<br>
+</p>
+<p class="dialog">I pray you are here to pay your respects to our dear departed
+friend?<br>
+</p>
+<p id="2pbAca80" class="shot">Tommy tosses the newspaper over to Fernandez<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="dialog">Indeed I am.<br>
+</p>
+<p id="lsbA1c10" class="shot">Closeup of one of the girls. Her eyes look dead.
+Tuned out. A walking corpse.<br>
+</p>
+<p id="qIaADce0" class="shot">Tommy lights up a cigarette<br>
+</p>
+<p id="aLaAsC50" class="shot">Fernandez holds the newspaper before him in a
+casual manner, his eyebrows raised.<br>
+</p>
+<p class="character">FERNANDEZ<br>
+</p>
+<p class="dialog">The Koran tells us that from water comes all life. The fetus
+grows within the amniotic fluid, and we all begin our existence within the
+seemingly endless sea.</p>
+<p id="teaADQ30" class="shot">Closeup of newspaper. A small article reads
+"Naked corpse found in sea. Police as yet unable to identify the body"<br>
+</p>
+<p class="character">FERNANDEZ<br>
+</p>
+<p class="dialog">&nbsp;But water will always threaten to swallow what it
+creates.</p>
+<p id="z9gLOK00" class="shot">Closeup of Fernandez<br>
+</p>
+<p class="character">FERNANDEZ<br>
+</p>
+<p class="dialog">Tell me Tommy. What is it about you and leaving people to
+die? It's becoming something of a motif, is it not?<br>
+</p>
+<p id="uE9ADAf0" class="shot">But Tommy is already making his way towards the
+exit. His face stern. Behind him Fernandez has put down the paper and is
+stroking the hair of one of the girls, almost like she were a cat. A smirk
+resides on his face.<br>
+</p>
+<p id="rEg8sN20" class="sceneheading">THE CHAPEL - Tommy's Displeasure<br>
+</p>
+<p id="44g8LEf0" class="shot">Tommy storms out of the chapel. His face like
+stone.<br>
+</p>
+<p id="ghg8N380" class="shot">A second car is now parked beside Tommy's. The
+driver side door is open. Matthias stands to attention beside it. He looks
+nervous and sheepish, not knowing where to put his hands.<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="dialog">Nice of you to show up.<br>
+</p>
+<p class="character">MATTHIAS<br>
+</p>
+<p class="dialog">Umm... Sure boss.<br>
+</p>
+<p class="character"></p>
+<p id="Lfg8yna0" class="shot">Tommy gets up close to Matthias. Matthias
+scratches his head, unsure how to respond.<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="dialog">I was being sarcastic, you moron. Remind me, what exactly do
+I pay you for?</p>
+<p class="character">MATTHIAS<br>
+</p>
+<p class="dialog">Errr....<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="dialog">Is it for your brains? Or sparkling conversation?<br>
+</p>
+<p id="9wh8I530" class="shot">Tommy jabs a finger into Matthias' chest.
+Matthias is clearly the bigger, more physically intimidating of the two, but he
+flinches away from Tommy.<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="dialog">I pay you to watch my back. That's all.</p>
+<p class="character">MATTHIAS<br>
+</p>
+<p class="dialog">Sorry, boss. But...<br>
+</p>
+<p id="E3j89k30" class="shot">Tommy strides away to his car. Turning his back
+to the hapless Matthias.<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="dialog">No buts.... and where is the rest of my... 'protection'?<br>
+</p>
+<p class="character">MATTHIAS<br>
+</p>
+<p class="dialog">Um... that's what I was trying to tell you boss... he didn't
+show up this morning.</p>
+<p id="Ikbbvf20" class="shot">Tommy opens his car door. The dimwitted Matthias
+still rooted to the spot in the background.<br>
+</p>
+<p class="character">TOMMY<br>
+</p>
+<p class="parenthetical">(under his breath)<br>
+</p>
+<p class="dialog">He who walks in the company of fools suffers a long way.<br>
+</p>
+<p id="nyIwHx20" class="sceneheading">BACKSTORY - Gala<br>
+</p>
+<p id="hbbAnK00" class="shot">Kathy sits by Elizabeth's bedside, stroking the
+young woman's hair tenderly.</p>
+<p class="character">KATHY<br>
+</p>
+<p class="dialog">I know you can hear me in there. I just know you can. My poor
+love. Now, where was I?<br>
+</p>
+<p id="mP78Gn00" class="shot">Inside a large banquet hall, hundreds of finely
+dressed ladies and gentlemen sit around large round tables, feasting on fine
+food and drinking champagne whilst a jazz band plays on the large stage at the
+center of the room.<br>
+</p>
+<p class="caption">"Oh yes. The return of Tommy. The return of the prodigal
+son! He'd made a lot of money. He was mixing it up with the high life"<br>
+</p>
+<p id="n078Ad20" class="shot">Closeup of Tommy, dressed in tuxedo. He sits at
+one of the more expensive tables, closest to the stage. His hands are raised,
+applauding the performers with bravado. A large smile on his face.<br>
+</p>
+<p class="caption">"He always had the charisma to get whatever he wanted, and
+now he had the money too"<br>
+</p>
+<p id="O9t8er50" class="shot">Over by the doorway we see Jack Crane. Seemingly
+even smaller and daintier in his younger age. He leans against door frame,
+keeping a hawkish eye on the activities of Tommy's table.<br>
+</p>
+<p class="caption">"But where ever Tommy went, he always attracted attention.
+Not all of it good."<br>
+</p>
+<p id="hAaced40" class="shot">A young table attendant delivers an envelope to
+Tommy at his table. He gives it an inquisitive glance.<br>
+</p>
+<p class="caption">"There were other, let's say 'undesirable elements' of the
+community that wanted their fingers in his pie"<br>
+</p>
+<p id="A3t8vne0" class="sceneheading">BACKSTORY - Devil in the Details<br>
+</p>
+<p id="Q77chj10" class="shot">Up on summit, tall cranes, bulldozers and diggers
+dominate the scene. The foundations of the new casino are in place and
+construction is well underway.<br>
+</p>
+<p class="caption">"He could have built that casino anywhere he wanted. Any
+town in California, any state in America, any country in the world."<br>
+</p>
+<p id="jg8c7L80" class="shot">On the building site, inside a trailer, several
+men stand at a table, surveying the maps and blueprints scattered across it's
+surface. We don't see their faces.<br>
+</p>
+<p class="caption">"But it was like he had some vendetta to settle with Tommy
+and Jean."<br>
+</p>
+<p id="cs8cfoc0" class="shot">On a paper map, we see a finger pointing at the
+location of the Chapman Diner. On the map can also be seen the plot of land set
+aside for the casino. The other side of the road is marked as "Ohlone Burial
+Ground". Everywhere else is mountainside or redwoods.<br>
+</p>
+<p class="caption">"Well, anyway - things moved quickly. Too quickly as it
+turned out."<br>
+</p>
+<p id="338c3bf0" class="shot">Closeup of construction manager, raising the
+front of his hard hat with one hand and rubbing the other hand through his hair
+nervously. Jack Crane stands next to him with a menacing air.<br>
+</p>
+<p class="caption">"The boundaries of the diner extended way further than they
+imagined, taking up a key piece of land"<br>
+</p>
+<p id="PdacdE20" class="shot">Tommy bangs his fist down on the table angrily<br>
+</p>
+<p class="caption">"It was too late to back out now. The stakes were too high."<br>
+</p>
+<p id="aw2m2db0" class="shot">In a quiet, secluded stretch of the San Lorenzo
+River, the lifeless body of the construction manager floats faces up, bobbing
+up and down gently in the slow moving current.<br>
+</p>
+<p id="ieac3k90" class="sceneheading">BACKSTORY - Family ties<br>
+</p>
+<p id="ieac2k90" class="shot">Jeff, Jean &amp; Tommy stand in the diner's
+kitchen. They look to be exchanged in a heated conversation. Tommy holds a
+sheaf of papers outstretched in one hand and a pen in the other.<br>
+</p>
+<p class="caption">"Tommy did the only thing he could do. He offered to buy the
+old diner."<br>
+</p>
+<p id="vFac2b80" class="shot">Jeff turns away, his body language defiant, as he
+refuses to sign the papers. Jean has her arms thrown up, in a pleading motion
+to her husband.<br>
+</p>
+<p class="caption">"Jean saw this as a way out of their financial troubles, but
+Jeff was a proud man. Maybe too proud. He wasn't going to sell. He wasn't going
+to give up his dream."<br>
+</p>
+<p id="j42m0a90" class="shot">Tommy points his finger directly at his brother,
+in a threatening gesture.<br>
+</p>
+<p class="caption">"They said things to each other that day like all brothers
+do. Silly things. Shouting and screaming. They let it all out. Threatening each
+other and this and that."<br>
+</p>
+<p id="3e4mC5d0" class="shot">Tommy storms out of the diner, slamming the door
+behind him, so hard that it bounces back of it's hinges.<br>
+</p>
+<p class="caption">"Old wounds were reopened. And never closed."<br>
+</p>
+<p id="7n4m5k70" class="shot">Jean sits in a booth, sobbing to herself.<br>
+</p>
+<p class="caption">"And a wedge was driven between Jeff and Jean that night."<br>
+</p>
+<p id="xE4mur30" class="shot">Jeff walks over to Jean, arms outstretched in an
+effort to comfort her.<br>
+</p>
+<p id="sDbwum50" class="shot">But Jean flees out of the door. Jeff makes no
+effort to follow her.<br>
+</p>
+<p class="caption">"Life can change so quickly..."</p>
+<p id="285mrhe0" class="shot">Kathy still sits beside the prone Elizabeth, she
+snaps her fingers together in the air.<br>
+</p>
+<p class="caption">"...just like that."<br>
+</p>
+<p class="character">SFX<br>
+</p>
+<p class="dialog">SNAP!<br>
+</p>
+<p id="3B5mhQ10" class="sceneheading">BACKSTORY - Roughed-up<br>
+</p>
+<p id="ll8wGo90" class="shot">The diner car park is deserted except for Jeff's
+truck and a lone, white van - almost cloaked by the pre-dawn mist. The shapes
+of two men can be seen sitting up front in the van. Matthias and Vadym.</p>
+<p class="caption">"If only Tommy hadn't got mixed up in things beyond his
+control. I'm sure everything could have been sorted out."<br>
+</p>
+<p id="Hg8wib20" class="shot">Jeff stands at the front doors, opening up for
+the day's business.<br>
+</p>
+<p class="caption">"But it was no longer just a family matter."<br>
+</p>
+<p id="p38wfke0" class="shot">The two men approach Jeff from behind, startling
+him.<br>
+</p>
+<p class="caption">"The next day Jeff received a message."<br>
+</p>
+<p id="hz9we840" class="shot">Jeff receives a powerful blow to his midriff,
+knocking the wind out of him.<br>
+</p>
+<p class="caption">"I pleaded and pleaded with your father to give in.
+Thankfully, he was proud but he wasn't stupid. He wouldn't put his family at
+risk."<br>
+</p>
+<p id="3n9wuDg0" class="shot">Jeff is doubled over, unable to defend himself,
+and receives a meaty fist to the side of his head, knocking him cold.<br>
+</p>
+<p class="caption">"He was down, bruised and utterly defeated. I felt so awful.
+I... I wish I could have done more for him"</p>
+<p id="lv9w9h40" class="shot">Jeff lies sprawled on the pavement. The two men
+loom over him, menacingly.<br>
+</p>
+<p class="caption">"I often think about that."<br>
+</p>
+<p id="aOaw7f10" class="shot">Closeup of Jeff on the ground, as the two men
+walk away in the direction of their van.<br>
+</p>
+<p class="caption">"They'd roughed him up pretty bad - but it was just a
+warning."</p>
+</body>
+</html>

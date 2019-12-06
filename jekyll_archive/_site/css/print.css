@@ -1,0 +1,8 @@
+header,
+footer,
+#toc {
+    display: none;
+}
+article {
+    display: block;
+}
