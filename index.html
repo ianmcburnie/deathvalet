@@ -1,134 +1,114 @@
 <!DOCTYPE html>
 <html>
     <head lang="en">
-        <title>Death Valet</title>
+        <title>Death Valet - A Graphic Novel</title>
         <style>
-            * {
-                box-sizing: border-box;
+            #wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
             }
             html {
                 font-family: Helvetica, Arial, sans-serif;
                 height: 100%;
             }
             body {
-                background: linear-gradient(#eee, #ddd);
-                height: 100%;
-                overflow: hidden;
-            }
-            body > div:first-child {
-                height: 100%;
-                margin: 0 auto;
-                width: 580px;
+                background-color: #ccc;
+                height: calc(100% - 20px); // account for margin
+                margin: 10px;
             }
             header {
                 color: white;
-                background: #000;
-                display: table;
-            }
-            header > nav {
-                background: linear-gradient(#777, #666);
-                display: table-cell;
-                font-size: 12px;
-                padding: 15px 30px;
-                width: 10%;
-                vertical-align: bottom;
-            }
-            header > nav h2 {
-                font-size: 12px;
-            }
-            #title {
-                background: linear-gradient(#8C3838, #8b0000);
-                border-left: 1px solid #eee;
-                border-right: 1px solid #eee;
-                display: table-cell;
-                font-size: 14px;
-                margin: 0;
-                padding: 15px 30px;
-                vertical-align: bottom;
-                width: 60%;
-            }
-            #description {
-                background: linear-gradient(#333, #222);
-                display: table-cell;
-                font-size: 14px;
-                margin: 0;
-                padding: 15px 30px;
-                vertical-align: bottom;
-                width: 35%;
-            }
-            #issues {
                 text-align: center;
             }
-            a {
+            header > div {
+                background: linear-gradient(#8C3838, #8b0000);
+                border-radius: 5px 5px 0 0;
+                padding: 5px;
+            }
+            header a,
+            header a:focus,
+            header a:hover,
+            header a:active {
                 color: white;
             }
-            a:focus,
-            a:hover,
-            a:active {
-                color: #ffcc00;
+            header a:focus {
+                outline: 1px dashed white;
+                outline-offset: 2px;
             }
-            ol {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
+            header p {
+                font-size: 14px;
             }
-            h1 {
-                margin: 0;
-            }
-            p {
-                margin: 0;
-            }
-            div[role=main] {
+            main {
+                display: flex;
                 height: 100%;
             }
             iframe {
                 border: 0;
-                height: calc(100% - 140px);
-                margin: 10px 0;
                 width: 100%;
+            }
+            header h1 {
+                margin: 15px;
+            }
+            nav {
+                background-color: #8b0000;
+                margin: 2px 0 10px 0;
+            }
+            nav h2 {
+                display: inline-block;
+                font-size: 12px;
+                font-weight: normal;
+                margin: 15px 0;
+            }
+            nav ol {
+                display: inline-block;
+                font-size: 12px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav li {
+                display: inline-block;
             }
         </style>
     </head>
     <body>
-        <div>
+        <div id="wrapper">
             <header role="banner">
-                <div id="title">
-                    <h1>Death Valet.</h1>
+                <div>
+                    <h1>.DEATH.VALET.</h1>
+                    <p>A GRAPHIC NOVEL BY <a href="mailto:ianmcburnie@hotmail.com">IAN MCBURNIE</a></p>
                 </div>
-                <div id="description">
-                    <p>A graphic novel by <a href="mailto:ianmcburnie@hotmail.com">Ian McBurnie</a>.</p>
-                </div>
-                <nav id="issues" role="navigation" aria-labelledby="nav_title">
-                    <h2 id="nav_title">Issue</h2>
+                <nav id="issues" role="navigation" aria-labelledby="nav-title">
+                    <h2 id="nav-title">ISSUES:</h2>
                     <ol>
                         <li><a href="1.html" target="comic">1</a></li>
                         <li><a href="2.html" target="comic">2</a></li>
                         <li><a href="3.html" target="comic">3</a></li>
-                        <li><span>4</span></li>
-                        <li><span>5</span></li>
-                        <li><span>6</span></li>
                     </ol>
                 </nav>
             </header>
-            <div role="main">
+            <main role="main">
+                <!--<h2>Content</h2>-->
                 <iframe id="comic" name="comic" src="1.html" tabindex="-1"></iframe>
-            </div>
+            </main>
             <!--
             <footer role="contentinfo">
-                <p>Copyright © 2013 - 2015</p>
+                <p>Copyright © 2013</p>
             </footer>
             -->
         </div>
         <script>
-            function addMarginToFrame() {
-                frames[0].document.body.style['margin'] = '50px 0';
+            function addStylesToFrame() {
+                frames[0].document.body.style['margin'] = '20px auto';
             }
 
-            window.onload = addMarginToFrame;
-
+            // trigger style update when navigation is clicked
             document.getElementsByTagName('ol')[0].onclick = function(e) {
-                window.setTimeout(addMarginToFrame, 10);
+                window.setTimeout(addStylesToFrame, 10);
             }
+
+            window.onload = addStylesToFrame;
         </script>
     </body>
 </html>
