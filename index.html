@@ -56,19 +56,29 @@
             }
             nav h2 {
                 display: inline-block;
-                font-size: 12px;
+                font-size: 16px;
                 font-weight: normal;
                 margin: 15px 0;
             }
             nav ol {
                 display: inline-block;
-                font-size: 12px;
+                font-size: 16px;
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
             }
             nav li {
                 display: inline-block;
+                margin: 0 4px;
+            }
+            nav button {
+                background-color: transparent;
+                color: white;
+                margin-left: 4px;
+            }
+            nav button:focus {
+                outline: 1px dashed white;
+                outline-offset: 2px;
             }
         </style>
     </head>
@@ -86,6 +96,7 @@
                         <li><a href="2.html" target="comic">2</a></li>
                         <li><a href="3.html" target="comic">3</a></li>
                     </ol>
+                    <button aria-label="Expand/Collapse">▲</button>
                 </nav>
             </header>
             <main role="main">
@@ -99,6 +110,9 @@
             -->
         </div>
         <script>
+            var buttonEl = document.querySelector('header nav button');
+            var titleEl = document.querySelector('header > div');
+            /*
             function addStylesToFrame() {
                 frames[0].document.body.style['margin'] = '20px auto';
             }
@@ -109,6 +123,12 @@
             }
 
             window.onload = addStylesToFrame;
+            */
+
+            buttonEl.addEventListener('click', function(e) {
+                titleEl.hidden = !titleEl.hidden;
+                buttonEl.innerText = buttonEl.innerText === '▼' ? '▲' : '▼';
+            });
         </script>
     </body>
 </html>
