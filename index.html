@@ -13,12 +13,12 @@
                 height: 100%;
             }
             body {
-                background-color: #ccc;
+                background-color: #ddd;
                 height: calc(100% - 20px); // account for margin
                 margin: 10px;
             }
             header {
-                color: white;
+                color: #ddd;
                 text-align: center;
             }
             header > div {
@@ -30,9 +30,13 @@
             header a:focus,
             header a:hover,
             header a:active {
+                color: #ddd;
+            }
+            header a:hover {
                 color: white;
             }
             header a:focus {
+                color: white;
                 outline: 1px dashed white;
                 outline-offset: 2px;
             }
@@ -48,6 +52,7 @@
                 width: 100%;
             }
             header h1 {
+                color: white;
                 margin: 15px;
             }
             nav {
@@ -73,10 +78,17 @@
             }
             nav button {
                 background-color: transparent;
-                color: white;
+                border: 0 none;
+                color: #ddd;
+                font-size: 16px;
                 margin-left: 4px;
+                padding: 0;
+            }
+            nav button:hover {
+                color: white;
             }
             nav button:focus {
+                color: white;
                 outline: 1px dashed white;
                 outline-offset: 2px;
             }
